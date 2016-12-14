@@ -1,0 +1,1 @@
+"use strict";+function(o){o(window).on("scroll",function(){var c=o(this).scrollTop();c>200?o(".back2top").addClass("is-active"):o(".back2top").removeClass("is-active")}),o(document).on("click",".back2top",function(){o("html,body").animate({scrollTop:0},800)})}(jQuery);
