@@ -53,6 +53,9 @@ function jaguar_scripts_styles() {
     wp_enqueue_style( 'jaguar', get_template_directory_uri() . '/build/css/app.css', array(), JAGUAR_VERSION );
 
     wp_enqueue_script( 'jaguar' , get_template_directory_uri() . '/build/js/application.js' , array('jquery') , JAGUAR_VERSION ,true);
+    wp_localize_script( 'jaguar' , 'J' , array(
+        'ajax_url' => admin_url( 'admin-ajax.php' ),
+      ) );
 
     if ( is_singular() && has_post_thumbnail() ) {
 
