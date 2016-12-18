@@ -18,6 +18,11 @@ if ( post_password_required() )
             ) );
             ?>
         </ol>
+        <?php the_comments_pagination( array(
+            'prev_text' => '上一页',
+            'next_text' => '下一页',
+            'prev_next' => false, 
+        ) );?>
     <?php endif; ?>
     <?php comment_form(); ?>
 </div>
