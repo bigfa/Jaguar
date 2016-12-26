@@ -40,6 +40,7 @@ function jaguar_is_has_image($post_id){
 
 function jaguar_setup() {
     add_theme_support( 'post-thumbnails' );
+    register_nav_menu( 'top' , '顶部菜单' );
 }
 
 add_action( 'after_setup_theme', 'jaguar_setup' );

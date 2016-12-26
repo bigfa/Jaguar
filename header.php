@@ -15,10 +15,10 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
     <header id="header" class="home-header blog-background banner-mask">
-        <div class="nav-header container">
+        <div class="nav-header container">       
             <div class="nav-header-container">
                 <a class="back-home" href="/">Home</a>
-            </div>
+            </div>            
         </div>
         <div class="header-wrap">
             <div class="container">
@@ -29,7 +29,7 @@
                         <div class="post-info-container">
                             <h2 class="post-page-title "><?php the_title();?></h2>
                             <time class="post-page-time"><?php echo get_the_date('M d,Y');?></time><span class="middotDivider"></span>
-                            <span class="post-page-author"><?php echo get_user_meta($post->post_author,'nickname',true);?></span>
+                            <span class="post-page-author"><a href="<?php echo get_author_posts_url($post->post_author);?>"><?php echo get_user_meta($post->post_author,'nickname',true);?></a></span>
                         </div>
                     </div>
                 <?php elseif (is_archive()) :
