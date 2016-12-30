@@ -13,7 +13,7 @@
                 <?php echo get_the_tag_list('<div class="tag-list">','','</div>');?>
                 <div class="author-field u-textAlignCenter">
                     <?php echo get_avatar(get_the_author_meta( 'user_email' ),64)?>
-                    <h3><?php the_author();?></h3>
+                    <h3><a href="<?php echo get_author_posts_url( get_the_author_meta('ID') );?>"><?php the_author();?></a></h3>
                     <p><?php echo get_the_author_meta( 'description' );?></p>
                 </div>
                 <?php the_post_navigation( array(
