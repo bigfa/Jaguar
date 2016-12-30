@@ -4,14 +4,13 @@
  *
  * @package Jaguar
  * @author bigfa
- * @version 1.0.0
+ * @version 1.0.1
  * @link https://fatesinger.com
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('header.php');
 ?>
-
 <div class="content-area container">
     <div class="site-content">
         <?php while($this->next()): ?>
