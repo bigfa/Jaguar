@@ -1,6 +1,6 @@
 <?php
 
-function jaguar_get_background_image($post_id){
+function jaguar_get_background_image($post_id = null , $width = null , $height = null){
     if( has_post_thumbnail($post_id) ){
         $timthumb_src = wp_get_attachment_image_src(get_post_thumbnail_id($post_id),'full');
         $output = $timthumb_src[0];
@@ -15,6 +15,8 @@ function jaguar_get_background_image($post_id){
             $output = $defaltthubmnail;
         }
     }
+
+    if ( JAGUAR_UPYUN && $height && $width ) return $output . '!/both/' . $width . 'x' . $height;
     return $output;
 }
 
