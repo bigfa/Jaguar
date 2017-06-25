@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('simple'); ?>
     <div class="content-area container">
         <div class="site-content">
             <?php if ( have_posts() ) : ?>

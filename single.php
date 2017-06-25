@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('simple'); ?>
     <div class="content-area container">
         <div class="site-content">
             <?php while ( have_posts() ) : the_post(); ?>
