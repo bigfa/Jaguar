@@ -1,5 +1,5 @@
 <?php get_header('simple'); ?>
-    <div class="content-area container">
+    <div class="content-area container is-homeList">
         <div class="site-content">
             <?php if ( have_posts() ) : ?>
                 <?php while ( have_posts() ) : the_post(); ?>
