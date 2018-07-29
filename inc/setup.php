@@ -41,7 +41,7 @@ function jaguar_send_analystic(){
     $current_version = get_option('_jaguar_version');
     $api_url = "https://dev.fatesinger.com/_/api/";
     $theme_data = jaguar_get_theme();
-    if ( $current_version == $theme_data['theme_version'] ) return;
+    if ( $current_version == $theme_data['theme_version'] || $theme_data['site_url'] == 'localhost' ) return;
     $send_body = array_merge(array('action' => 'jaguar_send_analystic'), $theme_data);
     $send_for_check = array(
         'body' => $send_body,
