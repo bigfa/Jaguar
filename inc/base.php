@@ -1,35 +1,37 @@
 <?php
 
-function jaguar_get_background_image($post_id = null , $width = null , $height = null){
-    if( has_post_thumbnail($post_id) ){
-        $timthumb_src = wp_get_attachment_image_src(get_post_thumbnail_id($post_id),'full');
+function jaguar_get_background_image($post_id = null, $width = null, $height = null)
+{
+    if (has_post_thumbnail($post_id)) {
+        $timthumb_src = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'full');
         $output = $timthumb_src[0];
     } else {
         $content = get_post_field('post_content', $post_id);
-        $defaltthubmnail = get_template_directory_uri().'/build/img/default.jpg';
+        $defaltthubmnail = get_template_directory_uri() . '/build/img/default.jpg';
         preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $strResult, PREG_PATTERN_ORDER);
         $n = count($strResult[1]);
-        if($n > 0){
+        if ($n > 0) {
             $output = $strResult[1][0];
         } else {
             $output = $defaltthubmnail;
         }
     }
 
-    if ( JAGUAR_UPYUN && $height && $width ) return $output . '!/both/' . $width . 'x' . $height;
+    if (JAGUAR_UPYUN && $height && $width) return $output . '!/both/' . $width . 'x' . $height;
     return $output;
 }
 
-function jaguar_is_has_image($post_id){
+function jaguar_is_has_image($post_id)
+{
     static $has_image;
     global $post;
-    if( has_post_thumbnail($post_id) ){
+    if (has_post_thumbnail($post_id)) {
         $has_image = true;
     } else {
         $content = get_post_field('post_content', $post_id);
         preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $strResult, PREG_PATTERN_ORDER);
         $n = count($strResult[1]);
-        if($n > 0){
+        if ($n > 0) {
             $has_image = true;
         } else {
             $has_image = false;
@@ -40,97 +42,102 @@ function jaguar_is_has_image($post_id){
 
 
 
-function jaguar_setup() {
-    add_theme_support( 'post-thumbnails' );
-    register_nav_menu( 'top' , '顶部菜单' );
+function jaguar_setup()
+{
+    add_theme_support('post-thumbnails');
+    register_nav_menu('top', '顶部菜单');
 }
 
-add_action( 'after_setup_theme', 'jaguar_setup' );
+add_action('after_setup_theme', 'jaguar_setup');
 
 
-function jaguar_scripts_styles() {
+function jaguar_scripts_styles()
+{
 
-    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
-        wp_enqueue_script( 'comment-reply' );
+    if (is_singular() && comments_open() && get_option('thread_comments'))
+        wp_enqueue_script('comment-reply');
 
-    wp_enqueue_style( 'jaguar', get_template_directory_uri() . '/build/css/app.css', array(), JAGUAR_VERSION );
+    wp_enqueue_style('jaguar', get_template_directory_uri() . '/build/css/app.css', array(), JAGUAR_VERSION);
 
-    wp_enqueue_script( 'jaguar' , get_template_directory_uri() . '/build/js/application.js' , array('jquery') , JAGUAR_VERSION ,true);
-    wp_localize_script( 'jaguar' , 'J' , array(
-        'ajax_url' => admin_url( 'admin-ajax.php' ),
-      ) );
+    wp_enqueue_script('jaguar', get_template_directory_uri() . '/build/js/application.js', array('jquery'), JAGUAR_VERSION, true);
+    wp_localize_script('jaguar', 'J', array(
+        'ajax_url' => admin_url('admin-ajax.php'),
+    ));
 
-    if ( is_singular() && has_post_thumbnail() ) {
+    if (is_singular() && has_post_thumbnail()) {
 
         global $post;
-        $timthumb_src = wp_get_attachment_image_src(get_post_thumbnail_id($post_id),'full');
+        $timthumb_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
         $output = $timthumb_src[0];
         $custom_css = "
                 .banner-mask{
                         background-image:url(" . $output . ");
                 }";
-        wp_add_inline_style( 'jaguar', $custom_css );
+        wp_add_inline_style('jaguar', $custom_css);
     }
-
 }
 
-add_action( 'wp_enqueue_scripts', 'jaguar_scripts_styles' );
+add_action('wp_enqueue_scripts', 'jaguar_scripts_styles');
 
-function jaguar_wp_title( $title, $sep ) {
+function jaguar_wp_title($title, $sep)
+{
     global $paged, $page;
 
-    if ( is_feed() )
+    if (is_feed())
         return $title;
 
 
-    $title .= get_bloginfo( 'name', 'display' );
+    $title .= get_bloginfo('name', 'display');
 
 
-    $site_description = get_bloginfo( 'description', 'display' );
-    if ( $site_description && ( is_home() || is_front_page() ) )
+    $site_description = get_bloginfo('description', 'display');
+    if ($site_description && (is_home() || is_front_page()))
         $title = "$title $sep $site_description";
 
-    if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() )
-        $title = "$title $sep " . sprintf( __( 'Page %s', 'twentythirteen' ), max( $paged, $page ) );
+    if (($paged >= 2 || $page >= 2) && !is_404())
+        $title = "$title $sep " . sprintf(__('Page %s', 'twentythirteen'), max($paged, $page));
 
     return $title;
 }
 
-add_filter( 'wp_title', 'jaguar_wp_title', 10, 2 );
+add_filter('wp_title', 'jaguar_wp_title', 10, 2);
 
 
-function jaguar_ssl_avatar($avatar) {
-    $avatar = str_replace(array("www.gravatar.com","0.gravatar.com","1.gravatar.com","2.gravatar.com"),"secure.gravatar.com",$avatar);
+function jaguar_ssl_avatar($avatar)
+{
+    $avatar = str_replace(array("www.gravatar.com", "0.gravatar.com", "1.gravatar.com", "2.gravatar.com"), "secure.gravatar.com", $avatar);
     return $avatar;
 }
 
 add_filter('get_avatar', 'jaguar_ssl_avatar');
 
-function jaguar_recover_comment_fields($comment_fields){
+function jaguar_recover_comment_fields($comment_fields)
+{
     $comment = array_shift($comment_fields);
-    $comment_fields =  array_merge($comment_fields ,array('comment' => $comment));
+    $comment_fields =  array_merge($comment_fields, array('comment' => $comment));
     return $comment_fields;
 }
 
-add_filter('comment_form_fields','jaguar_recover_comment_fields');
+add_filter('comment_form_fields', 'jaguar_recover_comment_fields');
 
-function jaguar_post_nav_background() {
-    if ( ! is_single() ) {
+function jaguar_post_nav_background()
+{
+    if (!is_single()) {
         return;
     }
 
-    $previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-    $next     = get_adjacent_post( false, '', false );
+    $previous = (is_attachment()) ? get_post(get_post()->post_parent) : get_adjacent_post(false, '', true);
+    $next     = get_adjacent_post(false, '', false);
     $css      = '';
 
-    if ( is_attachment() && 'attachment' == $previous->post_type ) {
+    if (is_attachment() && 'attachment' == $previous->post_type) {
         return;
     }
 
-    if ( $previous &&  has_post_thumbnail( $previous->ID ) ) {
-        $prevthumb = wp_get_attachment_image_src( get_post_thumbnail_id( $previous->ID ), 'post-thumbnail' );
+    if ($previous &&  has_post_thumbnail($previous->ID)) {
+        $prevthumb = wp_get_attachment_image_src(get_post_thumbnail_id($previous->ID), 'post-thumbnail');
         $css .= '
-      .post-navigation .nav-previous { background-image: url(' . esc_url( $prevthumb[0] ) . ');}
+      .post-navigation .nav-previous { background-image: url(' . esc_url($prevthumb[0]) . ');}
       .post-navigation .nav-previous .post-title { color: #fff; }
       .post-navigation .nav-previous .meta-nav { color: rgba(255,255,255,.9)}
       .post-navigation .nav-previous:before{
@@ -145,10 +152,10 @@ function jaguar_post_nav_background() {
     ';
     }
 
-    if ( $next && has_post_thumbnail( $next->ID ) ) {
-        $nextthumb = wp_get_attachment_image_src( get_post_thumbnail_id( $next->ID ), 'post-thumbnail' );
+    if ($next && has_post_thumbnail($next->ID)) {
+        $nextthumb = wp_get_attachment_image_src(get_post_thumbnail_id($next->ID), 'post-thumbnail');
         $css .= '
-      .post-navigation .nav-next { background-image: url(' . esc_url( $nextthumb[0] ) . ');}
+      .post-navigation .nav-next { background-image: url(' . esc_url($nextthumb[0]) . ');}
       .post-navigation .nav-next .post-title { color: #fff; }
       .post-navigation .nav-next .meta-nav { color: rgba(255,255,255,.9)}
       .post-navigation .nav-next:before{
@@ -165,6 +172,6 @@ function jaguar_post_nav_background() {
 
     //echo $css;
 
-    wp_add_inline_style( 'jaguar', $css );
+    wp_add_inline_style('jaguar', $css);
 }
-add_action( 'wp_enqueue_scripts', 'jaguar_post_nav_background' );
+add_action('wp_enqueue_scripts', 'jaguar_post_nav_background');
