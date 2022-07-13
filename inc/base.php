@@ -57,7 +57,7 @@ function jaguar_scripts_styles()
     if (is_singular() && comments_open() && get_option('thread_comments'))
         wp_enqueue_script('comment-reply');
 
-    wp_enqueue_style('jaguar', get_template_directory_uri() . '/build/css/app.css', array(), JAGUAR_VERSION);
+    wp_enqueue_style('jaguar', get_template_directory_uri() . '/build/css/misc.css', array(), JAGUAR_VERSION);
 
     wp_enqueue_script('jaguar', get_template_directory_uri() . '/build/js/application.js', array('jquery'), JAGUAR_VERSION, true);
     wp_localize_script('jaguar', 'J', array(
