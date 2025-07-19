@@ -1,16 +1,17 @@
 <?php get_header(); ?>
 <div class="layoutSingleColumn layoutSingleColumn--wide u-paddingTop50">
-    <?php if (have_posts()) : ?>
-        <?php the_post(); ?>
-        <header class="archive--header">
-            <h1 class="archive--headline"><?php echo get_the_author(); ?></h1>
-            <div class="archive--description">
-                <?php if (get_the_author_meta('description')) : ?>
-                    <p><?php the_author_meta('description'); ?></p>
-                <?php endif; ?>
+    <header class="archive--header">
+        <?php if (get_term_meta(get_queried_object_id(), '_thumb', true)) : ?>
+            <div class="archive--icon">
+                <img src="<?php echo esc_url(get_term_meta(get_queried_object_id(), '_thumb', true)); ?>" alt="<?php single_cat_title(); ?>">
             </div>
-        </header>
-        <?php rewind_posts(); ?>
+        <?php endif; ?>
+        <h1 class="archive--headline"><?php single_cat_title(); ?></h1>
+        <?php if (get_the_archive_description()) : ?>
+            <div class="archive--description"><?php echo get_the_archive_description(); ?></div>
+        <?php endif; ?>
+    </header>
+    <?php if (have_posts()) : ?>
         <div class="post--list">
             <?php while (have_posts()) : the_post(); ?>
                 <?php get_template_part('template-parts/content', get_post_format()); ?>

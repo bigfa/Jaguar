@@ -39,7 +39,6 @@ function typescripts() {
                 // './ts/modules/db.ts',
                 // './ts/modules/lazy.ts',
                 // './ts/modules/map.ts',
-                './ts/modules/zoom.ts',
                 './ts/modules/action.ts',
                 './ts/modules/comment.ts',
                 './ts/modules/scroll.ts',
@@ -83,7 +82,7 @@ function setting() {
 
 // Watch files
 function watchFiles() {
-    gulp.watch(['./ts/app.ts'], gulp.series(typescripts));
+    gulp.watch(['./ts/app.ts', './ts/modules/*'], gulp.series(typescripts));
     gulp.watch(['./scss/app.scss', './scss/modules/*', './scss/templates/*'], gulp.series(css));
     gulp.watch(['./scss/setting.scss'], gulp.series(settingCss));
     gulp.watch(['./ts/setting.ts'], gulp.series(setting));

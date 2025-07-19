@@ -1,6 +1,9 @@
 .post--list {
     padding-top: 30x;
     padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
 
 .post-item {
@@ -9,10 +12,24 @@
     padding: 5px;
     border-radius: 15px;
     box-shadow: 0px 0px 1px 0 rgba(136, 167, 225, 10%);
-    border: 1px solid #fff;
+    border: 1px solid var(--jaguar-background-white);
 
     &__content {
-        padding: 0 8px 5px;
+        padding: 2px 8px 5px;
+    }
+
+    .post-excerpt {
+        font-size: 13px;
+        color: var(--jaguar-text-gray);
+        line-height: 1.5;
+        height: 4.5em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        margin-bottom: 3px;
+        margin-top: 5px;
     }
 
     .post-image {
@@ -71,15 +88,19 @@
 
     .post-title {
         font-size: 18px;
-        line-height: 1.5;
+        line-height: 1.3;
         &:hover {
             color: var(--jaguar-main-color);
+        }
+
+        & + .post-info {
+            margin-top: 5px;
         }
     }
 
     .post-info {
-        font-size: 14px;
-        color: var(--jaguar-text-gray);
+        font-size: var(--jaguar-meta-font-size, 12px);
+        color: var(--jaguar-text-gray-lightest);
         line-height: 1.5;
         a {
             &:hover {
@@ -88,12 +109,6 @@
             }
         }
     }
-}
-
-.post--list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
 }
 
 @media (max-width: 600px) {

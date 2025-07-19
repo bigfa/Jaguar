@@ -12,7 +12,7 @@ if (post_password_required())
         ); ?>
     </h2>
     <?php if (have_comments()) : ?>
-        <ol class="comment-list commentlist">
+        <ol class="comment--list">
             <?php
             wp_list_comments(array(
                 'style'       => 'ol',
@@ -29,7 +29,7 @@ if (post_password_required())
             'prev_next' => false,
         )); ?>
     <?php else : ?>
-        <ol class="comment-list commentlist">
+        <ol class="comment--list">
             <li><?php _e('No comments yet.', 'Jaguar'); ?></li>
         </ol>
     <?php endif; ?>

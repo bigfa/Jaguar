@@ -274,16 +274,10 @@
 }
 
 .post-navigation {
-    &.is-active {
-        .nav-links {
-            transform: translate3d(0, 0, 0);
-        }
-    }
     overflow: hidden;
     padding-top: 20px;
     .nav-links {
         position: relative;
-        transform: translate3d(0, 150%, 0);
         display: flex;
         justify-content: space-between;
         transition: 0.5s;
@@ -297,7 +291,7 @@
     .nav-previous,
     .nav-next {
         padding: 15px;
-        background-color: var(--jaguar-background-gray);
+        background-color: var(--jaguar-background-gray-light);
         width: 48%;
         box-sizing: border-box;
         a {

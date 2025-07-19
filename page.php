@@ -1,14 +1,14 @@
 <?php get_header(); ?>
-<div class="layoutSingleColumn layoutSingleColumn--article  u-paddingTop50">
+<div class="layoutSingleColumn u-paddingTop50">
     <?php while (have_posts()) : the_post(); ?>
-        <section class="post-content">
+        <section class="article">
             <header class="article--header">
-                <h2 class="article--headline p-name"><?php the_title(); ?></h2>
+                <h2 class="article--headline"><?php the_title(); ?></h2>
                 <?php if (get_post_meta(get_the_ID(), '_subtitle', true)) : ?>
-                    <div class="article--subline p-summary"><?php echo get_post_meta(get_the_ID(), '_subtitle', true); ?></div>
+                    <div class="article--subline"><?php echo get_post_meta(get_the_ID(), '_subtitle', true); ?></div>
                 <?php endif; ?>
             </header>
-            <div class="single-post-inner poppy">
+            <div class="poppy">
                 <?php the_content(); ?>
             </div>
         </section>

@@ -336,12 +336,12 @@ $jaguarSetting = new jaguarSetting(
                     //     'label' => __('Load more', 'Jaguar'),
                     //     'description' => __('Enable load more', 'Jaguar')
                     // ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'home_author',
-                    //     'label' => __('Author info', 'Jaguar'),
-                    //     'description' => __('Enable author info in homepage', 'Jaguar')
-                    // ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'show_excerpt',
+                        'label' => __('Excerpt info', 'Jaguar'),
+                        'description' => __('Enable excerpt info in homepage', 'Jaguar')
+                    ],
                     [
                         'type' => 'switch',
                         'name' => 'home_cat',

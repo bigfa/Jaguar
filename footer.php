@@ -1,6 +1,5 @@
 <?php global  $jaguarSetting; ?>
-</div>
-<footer class="site-footer u-textAlignCenter">
+<footer class="site--footer">
     just a <a href="https://fatesinger.com" target="_blank">bigfa</a> theme.
 </footer>
 </div>

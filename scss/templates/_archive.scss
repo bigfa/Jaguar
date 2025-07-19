@@ -2,15 +2,28 @@
     &--header {
         text-align: center;
         margin-bottom: 30px;
+        line-height: 1.2;
+        padding-top: 10px;
     }
 
     &--headline {
-        font-size: 32px;
+        font-size: 26px;
         margin-bottom: 10px;
     }
 
     &--description {
-        font-size: 16px;
-        color: var(--jaguar-text-gray-light);
+        font-size: 18px;
+        color: var(--jaguar-text-gray);
+    }
+
+    &--icon {
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 15px;
+            object-fit: cover;
+            // border: 1px solid var(--jaguar-border-color);
+        }
+        margin-bottom: 10px;
     }
 }

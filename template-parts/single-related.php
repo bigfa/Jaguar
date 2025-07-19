@@ -18,17 +18,17 @@
         ) : array()
     ));
     while ($the_query->have_posts()) : $the_query->the_post(); ?>
-        <div class="post--single__related__item">
+        <div class="post--single__related__item" itemscope itemtype="https://schema.org/Article">
             <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
                 <div class="post--single__related__item__img">
-                    <img src="<?php echo jaguar_get_background_image(get_the_ID(), 400, 200); ?>" class="cover" alt="<?php the_title(); ?>" />
+                    <img src="<?php echo jaguar_get_background_image(get_the_ID(), 400, 200); ?>" class="cover" alt="<?php the_title(); ?>" itemprop="image" />
                 </div>
                 <div class="post--single__related__item__content">
-                    <div class="post--single__related__item__title">
+                    <div class="post--single__related__item__title" itemprop="headline">
                         <?php the_title(); ?>
                     </div>
                     <div class="meta">
-                        <time datetime="<?php echo get_the_date('c'); ?>">
+                        <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished">
                             <?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) .  __('ago', 'Jaguar'); ?>
                         </time>
                     </div>

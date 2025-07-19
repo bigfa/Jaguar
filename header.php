@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+<?php global $jaguarSetting; ?>
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
@@ -9,6 +10,20 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <?php if ($jaguarSetting->get_setting('darkmode')) : ?>
+        <script>
+            window.DEFAULT_THEME = "auto";
+            if (localStorage.getItem("theme") == null) {
+                localStorage.setItem("theme", window.DEFAULT_THEME);
+            }
+            if (localStorage.getItem("theme") == "dark") {
+                document.querySelector("body").classList.add("dark");
+            }
+            if (localStorage.getItem("theme") == "auto") {
+                document.querySelector("body").classList.add("auto");
+            }
+        </script>
+    <?php endif; ?>
     <div class="surface--content">
         <header class="metabar metabar--bordered">
             <div class="metabar--block" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
@@ -30,4 +45,3 @@
             </div>
         </header>
         <div class="mask"></div>
-        <div class="content homepage">

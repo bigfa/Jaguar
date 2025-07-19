@@ -1,12 +1,3 @@
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -96,144 +87,6 @@ if (document.querySelector('.mask')) {
         document.querySelector('body').classList.remove('menu--actived');
     });
 }
-window.findParent = function (t, e, n) {
-    do {
-        if (e(t))
-            return t;
-        if (n && t == n)
-            return false;
-    } while ((t = t.parentNode));
-    return false;
-};
-var imgZoom = /** @class */ (function () {
-    function imgZoom() {
-        var _this = this;
-        this.currentIndex = 0;
-        this.images = [];
-        // this.init();
-        this.getZoomImages();
-        window.addEventListener('resize', function () {
-            if (document.querySelector('.overlay')) {
-                _this.loadImage(_this.images[_this.currentIndex]);
-            }
-        });
-    }
-    imgZoom.prototype.getZoomImages = function () {
-        var _this = this;
-        var images = document.querySelectorAll('[data-action="imageZoomIn"]');
-        var imageArray = Array.from(images);
-        this.images = __spreadArray([], imageArray, true).map(function (image) { return image.getAttribute('href'); })
-            .filter(function (href) { return href !== null; });
-        images.forEach(function (image) {
-            image.addEventListener('click', function (e) {
-                e.preventDefault();
-                var url = image.getAttribute('href');
-                if (url)
-                    _this.showOverlay(url);
-            });
-        });
-    };
-    imgZoom.prototype.renderNav = function () {
-        var _a, _b, _c, _d;
-        var nav = "".concat(this.currentIndex + 1, "/").concat(this.images.length);
-        var navElement = document.querySelector('.image--nav');
-        if (navElement) {
-            navElement.innerHTML = nav;
-        }
-        if (this.currentIndex === 0) {
-            (_a = document.querySelector('.mfp-arrow-left')) === null || _a === void 0 ? void 0 : _a.classList.add('disabled');
-        }
-        else {
-            (_b = document.querySelector('.mfp-arrow-left')) === null || _b === void 0 ? void 0 : _b.classList.remove('disabled');
-        }
-        if (this.currentIndex === this.images.length - 1) {
-            (_c = document.querySelector('.mfp-arrow-right')) === null || _c === void 0 ? void 0 : _c.classList.add('disabled');
-        }
-        else {
-            (_d = document.querySelector('.mfp-arrow-right')) === null || _d === void 0 ? void 0 : _d.classList.remove('disabled');
-        }
-    };
-    imgZoom.prototype.prevImage = function () {
-        if (this.currentIndex === 0) {
-            return;
-        }
-        this.currentIndex = this.currentIndex - 1;
-        this.loadImage(this.images[this.currentIndex]);
-        this.renderNav();
-    };
-    imgZoom.prototype.nextImage = function () {
-        if (this.currentIndex === this.images.length - 1) {
-            return;
-        }
-        this.currentIndex = this.currentIndex + 1;
-        this.loadImage(this.images[this.currentIndex]);
-        this.renderNav();
-    };
-    imgZoom.prototype.showOverlay = function (url) {
-        var _a, _b, _c;
-        var self = this;
-        var currentIndex = this.images.indexOf(url);
-        this.currentIndex = currentIndex;
-        var nav = this.images.length > 0
-            ? "<div class=\"image--nav\">".concat(currentIndex + 1, "/").concat(this.images.length, "</div><button title=\"Prev\" type=\"button\" class=\"mfp-arrow mfp-arrow-left mfp-prevent-close\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" fill=\"currentColor\" aria-hidden=\"true\">\n            <path d=\"M14.4998 7.80903C14.4742 7.74825 14.4372 7.69292 14.3908 7.64603L8.68084 1.93803C8.58696 1.84427 8.45967 1.79165 8.32699 1.79175C8.19431 1.79184 8.0671 1.84464 7.97334 1.93853C7.87959 2.03241 7.82697 2.1597 7.82707 2.29238C7.82716 2.42506 7.87996 2.55227 7.97384 2.64603L12.8278 7.50003H1.96484C1.83224 7.50003 1.70506 7.5527 1.61129 7.64647C1.51752 7.74024 1.46484 7.86742 1.46484 8.00003C1.46484 8.13263 1.51752 8.25981 1.61129 8.35358C1.70506 8.44735 1.83224 8.50003 1.96484 8.50003H12.8278L7.97384 13.354C7.87996 13.4478 7.82716 13.575 7.82707 13.7077C7.82697 13.8404 7.87959 13.9676 7.97334 14.0615C8.0671 14.1554 8.19431 14.2082 8.32699 14.2083C8.45967 14.2084 8.58696 14.1558 8.68084 14.062L14.3878 8.35403C14.4342 8.30713 14.4712 8.2518 14.4968 8.19103C14.5478 8.069 14.5489 7.93184 14.4998 7.80903Z\"></path>\n        </svg></button><button title=\"Next (Right arrow key)\" type=\"button\" class=\"mfp-arrow mfp-arrow-right mfp-prevent-close\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" fill=\"currentColor\" aria-hidden=\"true\">\n            <path d=\"M14.4998 7.80903C14.4742 7.74825 14.4372 7.69292 14.3908 7.64603L8.68084 1.93803C8.58696 1.84427 8.45967 1.79165 8.32699 1.79175C8.19431 1.79184 8.0671 1.84464 7.97334 1.93853C7.87959 2.03241 7.82697 2.1597 7.82707 2.29238C7.82716 2.42506 7.87996 2.55227 7.97384 2.64603L12.8278 7.50003H1.96484C1.83224 7.50003 1.70506 7.5527 1.61129 7.64647C1.51752 7.74024 1.46484 7.86742 1.46484 8.00003C1.46484 8.13263 1.51752 8.25981 1.61129 8.35358C1.70506 8.44735 1.83224 8.50003 1.96484 8.50003H12.8278L7.97384 13.354C7.87996 13.4478 7.82716 13.575 7.82707 13.7077C7.82697 13.8404 7.87959 13.9676 7.97334 14.0615C8.0671 14.1554 8.19431 14.2082 8.32699 14.2083C8.45967 14.2084 8.58696 14.1558 8.68084 14.062L14.3878 8.35403C14.4342 8.30713 14.4712 8.2518 14.4968 8.19103C14.5478 8.069 14.5489 7.93184 14.4998 7.80903Z\"></path>\n        </svg></button>")
-            : '';
-        var html = "<div class=\"overlay\"><button class=\"zoomImgClose\"><svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" xmlns=\"http://www.w3.org/2000/svg\" class=\"q\"><path d=\"M18.13 6.11l-5.61 5.61-5.6-5.61-.81.8 5.61 5.61-5.61 5.61.8.8 5.61-5.6 5.61 5.6.8-.8-5.6-5.6 5.6-5.62\"/></svg></button><div class=\"overlay-img-wrap\"><img class=\"overlay-image\"><div class=\"lds-ripple\"></div></div>".concat(nav, "</div>");
-        var bodyElement = document.querySelector('body');
-        if (bodyElement) {
-            bodyElement.insertAdjacentHTML('beforeend', html);
-            bodyElement.classList.add('u-overflowYHidden');
-        }
-        this.loadImage(url);
-        console.log(self.currentIndex);
-        (_a = document.querySelector('.zoomImgClose')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', function () {
-            self.overlayRemove();
-        });
-        (_b = document.querySelector('.mfp-arrow-right')) === null || _b === void 0 ? void 0 : _b.addEventListener('click', function () {
-            self.nextImage();
-        });
-        (_c = document.querySelector('.mfp-arrow-left')) === null || _c === void 0 ? void 0 : _c.addEventListener('click', function () {
-            self.prevImage();
-        });
-    };
-    imgZoom.prototype.loadImage = function (o) {
-        var s = new Image();
-        var rippleElement = document.querySelector('.lds-ripple');
-        if (rippleElement) {
-            rippleElement.style.display = 'inline-block';
-        }
-        s.onload = function () {
-            var t = s.width, e = s.height, n = window.innerHeight, a = window.innerWidth - 80;
-            a < t
-                ? ((e *= a / t), (t = a), n < e && ((t *= n / e), (e = n)))
-                : n < e && ((t *= n / e), (e = n), a < t && ((e *= a / t), (t = a)));
-            var i = document.querySelector('.overlay-image');
-            i.setAttribute('src', o), (i.style.width = t + 'px'), (i.style.height = e + 'px');
-            var overlayImgWrap = document.querySelector('.overlay-img-wrap');
-            if (overlayImgWrap) {
-                overlayImgWrap.classList.add('is-finieshed');
-            }
-            var rippleElement = document.querySelector('.lds-ripple');
-            if (rippleElement) {
-                rippleElement.style.display = 'none';
-            }
-        };
-        s.src = o;
-    };
-    imgZoom.prototype.overlayRemove = function () {
-        var _a, _b;
-        this.remove(document.querySelector('.overlay'));
-        (_a = document.querySelector('body')) === null || _a === void 0 ? void 0 : _a.classList.remove('is-zoomActive');
-        (_b = document.querySelector('body')) === null || _b === void 0 ? void 0 : _b.classList.remove('u-overflowYHidden');
-        // window.removeEventListener('scroll', I);
-        // window.removeEventListener('keyup', L);
-    };
-    imgZoom.prototype.remove = function (t) {
-        var e = t.parentNode;
-        e && e.removeChild(t);
-    };
-    return imgZoom;
-}());
-new imgZoom();
 var jaguarAction = /** @class */ (function (_super) {
     __extends(jaguarAction, _super);
     function jaguarAction() {
@@ -442,7 +295,7 @@ var jaguarComment = /** @class */ (function (_super) {
                     }
                     var a = document.getElementById('cancel-comment-reply-link'), i = document.getElementById('respond'), n = document.getElementById('wp-temp-form-div');
                     var comment = data.data;
-                    var html = "<li class=\"comment\" id=\"comment-".concat(comment.comment_ID, "\">\n                        <div class=\"comment-body comment-body__fresh\">\n                            <footer class=\"comment-meta\">\n                                <div class=\"comment--avatar\">\n                                    <img alt=\"\" src=\"").concat(comment.author_avatar_urls, "\" class=\"avatar\" height=\"42\" width=\"42\" />\n                                </div>\n                                <div class=\"comment--meta\">\n                                    <div class=\"comment--author\">").concat(comment.comment_author, "\n                                    <time class=\"comment--time\">\u521A\u521A</time>\n                                    </div>\n                                </div>\n                            </footer>\n                            <div class=\"comment-content\">\n                                ").concat(comment.comment_content, "\n                            </div>\n                        </div>\n                    </li>"); // @ts-ignore
+                    var html = "<li class=\"comment\" id=\"comment-".concat(comment.comment_ID, "\">\n                        <div class=\"comment-body comment-body__fresh\">\n                            <footer class=\"comment-meta\">\n                                <div class=\"comment--avatar\">\n                                    <img alt=\"\" src=\"").concat(comment.author_avatar_urls, "\" class=\"avatar\" height=\"42\" width=\"42\" />\n                                </div>\n                                <div class=\"comment--meta\">\n                                    <div class=\"comment--author\">").concat(comment.comment_author, "<span class=\"middotDivider\"></span>\n                                    <time class=\"comment--time\">\u521A\u521A</time>\n                                    </div>\n                                </div>\n                            </footer>\n                            <div class=\"comment-content\">\n                                ").concat(comment.comment_content, "\n                            </div>\n                        </div>\n                    </li>"); // @ts-ignore
                     var parent_id = (_a = document.querySelector('#comment_parent')) === null || _a === void 0 ? void 0 : _a.value;
                     // @ts-ignore
                     (a.style.display = 'none'), // @ts-ignore
@@ -469,7 +322,7 @@ var jaguarComment = /** @class */ (function (_super) {
                             (_d = document.querySelector('.no--comment')) === null || _d === void 0 ? void 0 : _d.remove();
                         }
                         (_e = document
-                            .querySelector('.commentlist')) === null || _e === void 0 ? void 0 : _e.insertAdjacentHTML('beforeend', html);
+                            .querySelector('.comment--list')) === null || _e === void 0 ? void 0 : _e.insertAdjacentHTML('beforeend', html);
                     }
                     var newComment = document.querySelector("#comment-".concat(comment.comment_ID));
                     if (newComment) {
@@ -510,25 +363,13 @@ var jaguarScroll = /** @class */ (function () {
         this.scroll();
     };
     jaguarScroll.prototype.scroll = function () {
-        var _this = this;
-        var endScroll = document.querySelector('.post-navigation');
-        var endScrollTop = endScroll ? endScroll.offsetTop : 0;
-        var windowHeight = window.innerHeight;
         window.addEventListener('scroll', function () {
-            var _a, _b, _c, _d;
+            var _a, _b;
             if (window.scrollY > 10) {
                 (_a = document.querySelector('.site--header')) === null || _a === void 0 ? void 0 : _a.classList.add('is-active');
             }
             else {
                 (_b = document.querySelector('.site--header')) === null || _b === void 0 ? void 0 : _b.classList.remove('is-active');
-            }
-            if (_this.is_single) {
-                if (window.scrollY > endScrollTop - windowHeight) {
-                    (_c = document.querySelector('.post-navigation')) === null || _c === void 0 ? void 0 : _c.classList.add('is-active');
-                }
-                else {
-                    (_d = document.querySelector('.post-navigation')) === null || _d === void 0 ? void 0 : _d.classList.remove('is-active');
-                }
             }
         });
     };

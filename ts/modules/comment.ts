@@ -46,7 +46,7 @@ class jaguarComment extends jaguarBase {
                                     <img alt="" src="${comment.author_avatar_urls}" class="avatar" height="42" width="42" />
                                 </div>
                                 <div class="comment--meta">
-                                    <div class="comment--author">${comment.comment_author}
+                                    <div class="comment--author">${comment.comment_author}<span class="middotDivider"></span>
                                     <time class="comment--time">刚刚</time>
                                     </div>
                                 </div>
@@ -87,7 +87,7 @@ class jaguarComment extends jaguarBase {
                                 document.querySelector('.no--comment')?.remove();
                             }
                             document
-                                .querySelector('.commentlist')
+                                .querySelector('.comment--list')
                                 ?.insertAdjacentHTML('beforeend', html);
                         }
 

@@ -4,6 +4,14 @@
 
 ## Changelog
 
+### 3.0.3
+
+- add mark mode
+
+### 3.0.2
+
+- remove zoom
+
 ### 3.0.1
 
 - add author archive meta

@@ -17,7 +17,7 @@ body {
     -moz-font-feature-settings: 'liga' on;
     color: var(--jaguar-text-color);
     line-height: 1.8;
-    // background-color: var(--jaguar-background-gray-light);
+    background-color: var(--jaguar-background-white);
 }
 
 h1,
@@ -122,12 +122,6 @@ svg:not(:root) {
     }
 }
 
-.middotDivider:after {
-    content: '/';
-    margin-left: 4px;
-    margin-right: 4px;
-}
-
 .u-paddingTop50 {
     padding-top: 50px;
 }
@@ -149,28 +143,8 @@ svg:not(:root) {
     padding-bottom: 50px;
 }
 
-.page-wrapper {
-    background-color: #fff;
-    padding: 30px;
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-
 .post-actions {
     padding-bottom: 10px;
-}
-
-.page {
-    .comments-area {
-        background-color: #fff;
-        border-top: 0;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        .layoutSingleColumn {
-            width: auto;
-            max-width: none;
-        }
-    }
 }
 
 .nav-links {
@@ -194,8 +168,8 @@ small {
 }
 
 .middotDivider {
-    padding-left: 0.35em;
-    padding-right: 0.35em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
     &:after {
         content: '·';
     }
@@ -222,7 +196,7 @@ small {
     padding: 15px 0;
     .page-numbers {
         text-align: center;
-        color: #fff;
+        color: var(--jaguar-background-white);
         background-color: var(--jaguar-text-light);
         padding: 5px 12px;
         font-size: 14px;
