@@ -1,0 +1,50 @@
+.markerPro--posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.markerPro--post {
+    display: flex;
+    background-color: var(--jaguar-background-gray);
+    padding: 5px;
+    border-radius: 15px;
+    img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-left: 15px;
+        border-radius: 10px;
+    }
+}
+
+.markerPro--content {
+    flex: 1 1 auto;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.markerPro--meta {
+    font-size: 12px;
+    margin-top: auto;
+    color: var(--jaguar-text-gray);
+
+    .sep {
+        &::before {
+            content: '·';
+            margin: 0 5px;
+        }
+    }
+}
+
+.markerPro--title {
+    a {
+        text-decoration: none;
+    }
+}
+
+.markerPro--addonTitle {
+    font-weight: bold;
+    padding-bottom: 10px;
+}

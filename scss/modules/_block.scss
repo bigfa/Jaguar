@@ -1,0 +1,103 @@
+.post--list {
+    padding-top: 30x;
+    padding-bottom: 30px;
+}
+
+.post-item {
+    position: relative;
+    background-color: var(--jaguar-background-gray);
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 1px 0 rgba(136, 167, 225, 10%);
+    border: 1px solid #fff;
+
+    &__content {
+        padding: 0 8px 5px;
+    }
+
+    .post-image {
+        width: 100%;
+        height: var(--jaguar-block-image-height, 200px);
+        object-fit: cover;
+        border-radius: 10px;
+
+        &-link {
+            position: relative;
+            display: flex;
+            margin-bottom: 8px;
+
+            .line {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: calc(80% + 6px);
+                border-top: 1px dashed var(--jaguar-background-gray);
+            }
+
+            .flag {
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                border: 1px solid var(--jaguar-background-gray);
+                border-radius: 100%;
+                box-shadow: 0px 0px 1px 0 rgba(136, 167, 225, 10%);
+            }
+
+            &::before {
+                content: '';
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                top: 80%;
+                left: -6px;
+                background-color: var(--jaguar-background-gray);
+                border-radius: 100%;
+            }
+
+            &::after {
+                content: '';
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                top: 80%;
+                right: -6px;
+                background-color: var(--jaguar-background-gray);
+                border-radius: 100%;
+            }
+        }
+    }
+
+    .post-title {
+        font-size: 18px;
+        line-height: 1.5;
+        &:hover {
+            color: var(--jaguar-main-color);
+        }
+    }
+
+    .post-info {
+        font-size: 14px;
+        color: var(--jaguar-text-gray);
+        line-height: 1.5;
+        a {
+            &:hover {
+                color: var(--jaguar-text-color);
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.post--list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+@media (max-width: 600px) {
+    .post--list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

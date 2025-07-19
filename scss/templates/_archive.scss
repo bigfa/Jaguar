@@ -1,0 +1,16 @@
+.archive {
+    &--header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &--headline {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    &--description {
+        font-size: 16px;
+        color: var(--jaguar-text-gray-light);
+    }
+}

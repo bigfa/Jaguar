@@ -1,0 +1,237 @@
+.comment-author {
+    .avatar {
+        float: left;
+        margin-right: 8px;
+        border-radius: 100%;
+    }
+}
+
+.comment-metadata {
+    font-size: 12px;
+}
+
+.comment-meta {
+    overflow: hidden;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.comment {
+    .fn {
+        color: var(--jaguar-main-color);
+    }
+}
+
+.comment-body {
+    padding: 30px 0;
+    border-bottom: 1px solid var(--jaguar-border-color-light);
+    position: relative;
+
+    p {
+        font-size: 14px;
+        color: var(--jaguar-text-gray);
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .reply {
+        position: absolute;
+        top: 10px;
+        right: 0;
+
+        .comment-reply-link {
+            color: #fff;
+            display: inline-block;
+            line-height: 1.2;
+            border-radius: 3px;
+            padding: 3px 8px;
+            background-color: var(--jaguar-main-color);
+            font-size: 12px;
+        }
+    }
+}
+
+.comment-list {
+    padding-bottom: 30px;
+}
+
+.comment-reply-title,
+.comments-title {
+    font-size: 18px;
+    color: var(--jaguar-text-gray-lightest);
+    margin-bottom: 20px;
+}
+
+.comment-notes {
+    font-size: 14px;
+    color: var(--jaguar-text-gray-lightest);
+}
+
+.comment-form {
+    label {
+        display: block;
+        font-size: 12px;
+        color: var(--jaguar-text-gray-lightest);
+    }
+
+    .logged-in-as {
+        font-size: 12px;
+    }
+
+    .required {
+        color: #bc403e;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    input[type='email'],
+    input[type='url'],
+    input[type='text'] {
+        line-height: 32px;
+        width: 260px;
+        padding: 0 10px;
+    }
+}
+
+#comment,
+.comment-form input[type='text'],
+.comment-form input[type='email'],
+.comment-form input[type='url'] {
+    border-radius: 15px;
+    background-color: transparent;
+    border: 1px solid var(--jaguar-border-color);
+    font-size: 14px;
+}
+
+#comment {
+    resize: none;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#submit {
+    background-color: transparent;
+    display: inline-block;
+    border: 1px solid var(--jaguar-border-color);
+    border-radius: 15px;
+    padding: 6px 16px;
+    font-size: 14px;
+    color: var(--jaguar-text-gray);
+    cursor: pointer;
+
+    &:hover {
+        border-color: var(--jaguar-main-color);
+        color: var(--jaguar-main-color);
+    }
+}
+
+.says {
+    display: none;
+}
+
+.comment-meta {
+    font-size: 14px;
+    color: var(--jaguar-text-gray-lightest);
+}
+
+.depth-1 > .children {
+    margin-left: 50px;
+}
+
+.comments-pagination {
+    margin-bottom: 15px;
+}
+
+.comment-respond {
+    margin-top: 15px;
+}
+
+#cancel-comment-reply-link {
+    font-size: 14px;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.comment-form-cookies-consent {
+    #wp-comment-cookies-consent {
+        display: none;
+    }
+    label {
+        font-size: 14px;
+        color: var(--jaguar-text-gray);
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            background-color: var(--jaguar-background-white);
+            border: 1px solid var(--jaguar-border-color);
+            border-radius: 4px;
+            height: 16px;
+            margin-right: 6px;
+            vertical-align: middle;
+            width: 16px;
+            content: '';
+            flex: 0 0 auto;
+        }
+    }
+    input:checked + label {
+        &::after {
+            background-color: var(--jaguar-main-color);
+            border-radius: 3px;
+            content: '';
+            position: absolute;
+            left: 1px;
+            height: 12px;
+            margin: 2px;
+            width: 12px;
+            flex: 0 0 auto;
+        }
+    }
+}
+
+.comment-meta {
+    display: flex;
+    align-items: center;
+
+    .avatar {
+        border-radius: 100%;
+    }
+}
+
+.comment--avatar {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.comment--meta {
+    flex: 1 1 auto;
+}
+
+.comment--author {
+    display: flex;
+    align-items: center;
+}
+
+.comment-reply-link {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.comment-content {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.comments-area {
+    padding-top: 30px;
+}

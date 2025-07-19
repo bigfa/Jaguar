@@ -1,0 +1,435 @@
+# Copyright (C) 2025 bigfa
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Jaguar 3.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Jaguar\n"
+"POT-Creation-Date: 2025-05-12T04:58:18+00:00\n"
+"PO-Revision-Date: 2025-07-18 18:57+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+"X-Domain: Jaguar\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Jaguar"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://fatesinger.com/79061"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "theme 2016"
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "bigfa"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://github.com/bigfa"
+msgstr ""
+
+#: inc/setting.php:28
+msgid "Success"
+msgstr ""
+
+#: inc/setting.php:47
+msgid "Setting saved success!"
+msgstr ""
+
+#: inc/setting.php:48
+msgid "Upload Image"
+msgstr ""
+
+#: inc/setting.php:56 inc/setting.php:62
+msgid "Theme Setting"
+msgstr "主题设置"
+
+#: inc/setting.php:63 inc/setting.php:86
+msgid "Documentation"
+msgstr "文档"
+
+#: inc/setting.php:113
+msgid "Save"
+msgstr ""
+
+#: inc/setting.php:202
+msgid "Basic Setting"
+msgstr "基础设置"
+
+#: inc/setting.php:207
+msgid "Feature Setting"
+msgstr "功能设置"
+
+#: inc/setting.php:213
+msgid "Singluar Setting"
+msgstr "文章设置"
+
+#: inc/setting.php:218
+msgid "SNS Setting"
+msgstr "社会化设置"
+
+#: inc/setting.php:223
+msgid "Custom Setting"
+msgstr "自定义设置"
+
+#: inc/setting.php:234
+msgid "Description"
+msgstr ""
+
+#: inc/setting.php:235
+msgid "Site description"
+msgstr ""
+
+#: inc/setting.php:240
+msgid "Headcode"
+msgstr ""
+
+#: inc/setting.php:241
+msgid ""
+"You can add content to the head tag, such as site verification tags, and so "
+"on."
+msgstr ""
+
+#: inc/setting.php:246
+msgid "Logo"
+msgstr ""
+
+#: inc/setting.php:247
+msgid "Logo address."
+msgstr ""
+
+#: inc/setting.php:252
+msgid "Og default thumb"
+msgstr ""
+
+#: inc/setting.php:253
+msgid "Og meta default thumb address."
+msgstr ""
+
+#: inc/setting.php:258
+msgid "Favicon"
+msgstr ""
+
+#: inc/setting.php:259
+msgid "Favicon address"
+msgstr ""
+
+#: inc/setting.php:264
+msgid "Title sep"
+msgstr ""
+
+#: inc/setting.php:265
+msgid "Default is"
+msgstr ""
+
+#: inc/setting.php:270
+msgid "Disable block css"
+msgstr ""
+
+#: inc/setting.php:271
+msgid "Do not load block-style files."
+msgstr ""
+
+#: inc/setting.php:276
+msgid "Gravatar proxy"
+msgstr ""
+
+#: inc/setting.php:277
+msgid "Gravatar proxy domain,like <code>cravatar.cn</code>"
+msgstr ""
+
+#: inc/setting.php:282
+msgid "RSS Tag"
+msgstr ""
+
+#: inc/setting.php:283
+msgid "You can add tag in rss to verify follow."
+msgstr ""
+
+#: inc/setting.php:294
+msgid "Update notice"
+msgstr ""
+
+#: inc/setting.php:295
+msgid "Get theme update notice."
+msgstr ""
+
+#: inc/setting.php:300
+msgid "Upyun CDN"
+msgstr ""
+
+#: inc/setting.php:301
+msgid ""
+"Make sure all images are uploaded to Upyun, otherwise thumbnails may not "
+"display properly."
+msgstr ""
+
+#: inc/setting.php:306
+msgid "Aliyun OSS CDN"
+msgstr ""
+
+#: inc/setting.php:307
+msgid ""
+"Make sure all images are uploaded to Aliyun OSS, otherwise thumbnails may "
+"not display properly."
+msgstr ""
+
+#: inc/setting.php:312
+msgid "Qiniu OSS CDN"
+msgstr ""
+
+#: inc/setting.php:313
+msgid ""
+"Make sure all images are uploaded to Qiniu OSS, otherwise thumbnails may not "
+"display properly."
+msgstr ""
+
+#: inc/setting.php:318
+msgid "Dark Mode"
+msgstr ""
+
+#: inc/setting.php:319
+msgid "Enable dark mode"
+msgstr ""
+
+#: inc/setting.php:324
+msgid "Default thumbnail"
+msgstr ""
+
+#: inc/setting.php:325
+msgid "Default thumbnail address"
+msgstr ""
+
+#: inc/setting.php:330
+msgid "Back to top"
+msgstr ""
+
+#: inc/setting.php:331
+msgid "Enable back to top"
+msgstr ""
+
+#: inc/setting.php:348
+msgid "Category info"
+msgstr ""
+
+#: inc/setting.php:349
+msgid "Enable category info in homepage"
+msgstr ""
+
+#: inc/setting.php:354
+msgid "Views info"
+msgstr ""
+
+#: inc/setting.php:355
+msgid "Enable views info in homepage"
+msgstr ""
+
+#: inc/setting.php:396
+msgid "Related posts"
+msgstr ""
+
+#: inc/setting.php:397
+msgid "Enable related posts"
+msgstr ""
+
+#: inc/setting.php:402
+msgid "Post like"
+msgstr ""
+
+#: inc/setting.php:403
+msgid "Enable post like"
+msgstr ""
+
+#: inc/setting.php:408
+msgid "Post navigation"
+msgstr ""
+
+#: inc/setting.php:409
+msgid "Enable post navigation"
+msgstr ""
+
+#: inc/setting.php:414
+msgid "Copy link"
+msgstr ""
+
+#: inc/setting.php:415
+msgid "Enable copy link"
+msgstr ""
+
+#: inc/setting.php:426
+msgid "Show parent comment"
+msgstr ""
+
+#: inc/setting.php:427
+msgid "Enable show parent comment"
+msgstr ""
+
+#: inc/setting.php:432
+msgid "Table of content"
+msgstr ""
+
+#: inc/setting.php:433
+msgid "Enable table of content"
+msgstr ""
+
+#: inc/setting.php:438
+msgid "Start heading"
+msgstr ""
+
+#: inc/setting.php:439
+msgid "Start heading,default h3"
+msgstr ""
+
+#: inc/setting.php:450
+msgid "Disable comment link"
+msgstr ""
+
+#: inc/setting.php:451
+msgid "Disable comment author url"
+msgstr ""
+
+#: inc/setting.php:456
+msgid "No reply text"
+msgstr ""
+
+#: inc/setting.php:457
+msgid "Text display when no comment in current post."
+msgstr ""
+
+#: inc/setting.php:462
+msgid "Friend icon"
+msgstr ""
+
+#: inc/setting.php:463
+msgid "Show icon when comment author url is in blogroll."
+msgstr ""
+
+#: inc/setting.php:486
+msgid "SNS Icons"
+msgstr ""
+
+#: inc/setting.php:487
+msgid ""
+"Show sns icons in footer, if this setting is on, the footer menu won',t be "
+"displayed."
+msgstr ""
+
+#: inc/setting.php:492
+msgid "Telegram"
+msgstr ""
+
+#: inc/setting.php:493
+msgid "Telegram link"
+msgstr ""
+
+#: inc/setting.php:498
+msgid "Email"
+msgstr ""
+
+#: inc/setting.php:499
+msgid "Your email address"
+msgstr ""
+
+#: inc/setting.php:504
+msgid "Instagram"
+msgstr ""
+
+#: inc/setting.php:505
+msgid "Instagram link"
+msgstr ""
+
+#: inc/setting.php:510
+msgid "Twitter"
+msgstr ""
+
+#: inc/setting.php:511
+msgid "Twitter link"
+msgstr ""
+
+#: inc/setting.php:516
+msgid "RSS"
+msgstr ""
+
+#: inc/setting.php:517
+msgid "RSS link"
+msgstr ""
+
+#: inc/setting.php:522
+msgid "Github"
+msgstr ""
+
+#: inc/setting.php:523
+msgid "Github link"
+msgstr ""
+
+#: inc/setting.php:528
+msgid "Discord"
+msgstr ""
+
+#: inc/setting.php:529
+msgid "Discord link"
+msgstr ""
+
+#: inc/setting.php:534
+msgid "Mastodon"
+msgstr ""
+
+#: inc/setting.php:535
+msgid "Mastodon link"
+msgstr ""
+
+#: inc/setting.php:540
+msgid "Custom"
+msgstr ""
+
+#: inc/setting.php:541
+msgid "Custom sns link,use html."
+msgstr ""
+
+#: inc/setting.php:551
+msgid "CSS"
+msgstr ""
+
+#: inc/setting.php:552
+msgid "Custom CSS"
+msgstr ""
+
+#: inc/setting.php:557
+msgid "Javascript"
+msgstr ""
+
+#: inc/setting.php:558
+msgid "Custom Javascript"
+msgstr ""
+
+#: inc/setting.php:563
+msgid "Copyright"
+msgstr ""
+
+#: inc/setting.php:564
+msgid "Custom footer content"
+msgstr ""
+
+#: template-parts/content.php:11 template-parts/single-related.php:32
+msgid "ago"
+msgstr "前"
+
+#: template-parts/single-related.php:1
+msgid "Related Posts"
+msgstr "相关文章"
+
+#. Template Name of the theme
+msgid "Wide Column"
+msgstr ""

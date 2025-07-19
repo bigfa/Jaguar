@@ -1,6 +1,6 @@
 {
     "name": "Jaguar",
-    "version": "1.1.0",
+    "version": "3.0.0",
     "description": "theme",
     "main": "gulpfile.js",
     "scripts": {
@@ -22,6 +22,7 @@
         "gulp-plumber": "^1.2.1",
         "gulp-postcss": "^8.0.0",
         "gulp-rename": "^1.4.0",
+        "gulp-typescript": "^6.0.0-alpha.1",
         "gulp-uglify": "^3.0.2",
         "normalize.scss": "^0.1.0",
         "sass": "^1.49.9"

@@ -1,16 +1,17 @@
 <?php get_header(); ?>
-<div class="content-area container">
-    <div class="site-content">
-        <?php if (have_posts()) : ?>
+<div class="layoutSingleColumn layoutSingleColumn--wide u-paddingTop50">
+    <?php if (have_posts()) : ?>
+        <div class="post--list">
             <?php while (have_posts()) : the_post(); ?>
-                <?php get_template_part('content', get_post_format()); ?>
+                <?php get_template_part('template-parts/content', get_post_format()); ?>
             <?php endwhile; ?>
-            <?php the_posts_pagination(array(
-                'prev_text'          => 'Previous page',
-                'next_text'          => 'Next page',
-                'before_page_number' => '',
-            )); ?>
-        <?php endif; ?>
-    </div>
+        </div>
+        <?php the_posts_pagination(array(
+            'prev_text'          =>  __('Previous page', 'Jaguar'),
+            'screen_reader_text' =>  __('Posts navigation', 'Jaguar'),
+            'next_text'          =>  __('Next page', 'Jaguar'),
+            'before_page_number' => '',
+        )); ?>
+    <?php endif; ?>
 </div>
 <?php get_footer(); ?>

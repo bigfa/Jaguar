@@ -10,6 +10,7 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const sass = require('gulp-sass')(require('sass'));
 const rename = require('gulp-rename');
+const ts = require('gulp-typescript');
 
 function css() {
     return gulp
@@ -29,31 +30,69 @@ function fonts() {
     return gulp.src('./fonts/*').pipe(gulp.dest('./build/fonts/'));
 }
 
-// Transpile, concatenate and minify scripts
-function scripts() {
+function typescripts() {
+    return (
+        gulp
+            .src([
+                // './ts/modules/helper.ts',
+                './ts/app.ts',
+                // './ts/modules/db.ts',
+                // './ts/modules/lazy.ts',
+                // './ts/modules/map.ts',
+                './ts/modules/zoom.ts',
+                './ts/modules/action.ts',
+                './ts/modules/comment.ts',
+                './ts/modules/scroll.ts',
+            ])
+            .pipe(
+                ts({
+                    noImplicitAny: true,
+                    outFile: 'ts.js',
+                })
+            )
+            //.pipe(uglify())
+            .pipe(gulp.dest('build/js/'))
+    );
+}
+
+function settingCss() {
     return gulp
-        .src(['./js/app.js'])
+        .src('./scss/setting.scss')
         .pipe(plumber())
-        .pipe(concat('all.bundle.js'))
+        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(gulp.dest('./build/css/'));
+}
+
+function setting() {
+    return gulp
+        .src(['./ts/extensions/*', './ts/setting.ts'])
+        .pipe(plumber())
         .pipe(
-            babel({
-                presets: ['@babel/preset-env'],
+            ts({
+                noImplicitAny: true,
+                outFile: 'setting.js',
+                target: 'es5',
             })
         )
         .pipe(uglify())
+        .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('./build/js/'));
 }
 
 // Watch files
 function watchFiles() {
-    gulp.watch(['./js/app.js'], gulp.series(scripts));
-    gulp.watch(['./scss/app.scss'], gulp.series(css));
+    gulp.watch(['./ts/app.ts'], gulp.series(typescripts));
+    gulp.watch(['./scss/app.scss', './scss/modules/*', './scss/templates/*'], gulp.series(css));
+    gulp.watch(['./scss/setting.scss'], gulp.series(settingCss));
+    gulp.watch(['./ts/setting.ts'], gulp.series(setting));
 }
 
 // define complex tasks
-const js = gulp.series(scripts);
+const js = gulp.series(typescripts);
 const watch = gulp.parallel(watchFiles);
-const build = gulp.parallel(watch, gulp.parallel(css, js, images, fonts));
+const build = gulp.parallel(watch, gulp.parallel(css, js, images, fonts, settingCss, setting));
 
 exports.css = css;
 exports.js = js;
