@@ -70,3 +70,56 @@ function jaguar_get_post_image_count($post_id)
     preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $strResult, PREG_PATTERN_ORDER);
     return count($strResult[1]);
 }
+
+
+/**
+ * Get link items by category id
+ *
+ * @since Jaguar 3.0.4
+ *
+ * @param term id
+ * @return link item list
+ */
+
+function get_the_link_items($id = null)
+{
+    $bookmarks = get_bookmarks('orderby=date&category=' . $id);
+    $output = '';
+    if (!empty($bookmarks)) {
+        $output .= '<ul class="link-items">';
+        foreach ($bookmarks as $bookmark) {
+            $image = $bookmark->link_image ? '<img src="' . $bookmark->link_image . '" alt="' . $bookmark->link_name . '" class="avatar">' : get_avatar($bookmark->link_notes, 64);
+            $output .=  '<li class="link-item"><a class="link-item-inner" href="' . $bookmark->link_url . '" title="' . $bookmark->link_description . '" target="_blank" ><span class="sitename">
+             ' . $image . '
+             <strong>' . $bookmark->link_name . '</strong>' . $bookmark->link_description . '<i class="btn">' . __('visit', 'Hera') . '</i></span></a></li>';
+        }
+        $output .= '</ul>';
+    } else {
+        $output = __('No links yet', 'Hera');
+    }
+    return $output;
+}
+
+/**
+ * Get link items
+ *
+ * @since Jaguar 3.0.4
+ *
+ * @return link iterms
+ */
+
+function get_link_items()
+{
+    $linkcats = get_terms('link_category');
+    $result = '';
+    if (!empty($linkcats)) {
+        foreach ($linkcats as $linkcat) {
+            $result .=  '<h3 class="link-title">' . $linkcat->name . '</h3>';
+            if ($linkcat->description) $result .= '<div class="link-description">' . $linkcat->description . '</div>';
+            $result .=  get_the_link_items($linkcat->term_id);
+        }
+    } else {
+        $result = get_the_link_items();
+    }
+    return $result;
+}

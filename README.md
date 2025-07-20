@@ -8,6 +8,7 @@
 
 - update translation
 - add nav menu
+- add blogroll template
 
 ### 3.0.3
 

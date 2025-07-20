@@ -6,7 +6,7 @@ Template Post Type: page
 get_header();
 ?>
 
-<main class="layoutSingleColumn layoutSingleColumn--article u-paddingTop50 article--double">
+<main class="layoutSingleColumn u-paddingTop50">
     <?php
     $args = [
         'posts_per_page' => -1,
