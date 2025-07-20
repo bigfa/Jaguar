@@ -1,5 +1,4 @@
-.poppyMeta,
-.lockedPostHeader {
+.poppyMeta {
     font-size: 14px;
     line-height: 1.4;
     color: var(--jaguar-text-gray-lightest);
@@ -46,6 +45,7 @@
 
 .tag-list {
     padding: 15px 0;
+
     a {
         display: inline-block;
         padding: 3px 8px;
@@ -64,33 +64,15 @@
 .article {
     padding-top: 50px;
     @include layoutSingleColumn;
+
     &--headline {
         font-size: 32px;
         font-weight: 900;
         line-height: 1.3;
     }
+
     &--header {
         margin-bottom: 20px;
-    }
-
-    &--note {
-        display: flex;
-        font-size: 12px;
-        line-height: 1.2;
-        color: var(--jaguar-main-color);
-        user-select: none;
-        span {
-            border: 1px solid var(--jaguar-main-color);
-            display: flex;
-            align-items: center;
-            svg {
-                margin-right: 4px;
-            }
-            padding: 4px 12px;
-            border-radius: 999rem;
-            font-weight: 700;
-        }
-        margin-bottom: 5px;
     }
 
     &--meta {
@@ -276,11 +258,14 @@
 .post-navigation {
     overflow: hidden;
     padding-top: 20px;
+
     .nav-links {
         position: relative;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
         transition: 0.5s;
+
         & > div {
             &:only-child {
                 text-align: center !important;
@@ -288,39 +273,50 @@
             }
         }
     }
+
+    .post-thumbnail {
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
     .nav-previous,
     .nav-next {
-        padding: 15px;
+        padding: 5px;
         background-color: var(--jaguar-background-gray-light);
-        width: 48%;
-        box-sizing: border-box;
-        a {
-            display: flex;
-            flex-direction: column;
-        }
         text-align: right;
         background-origin: border-box;
         background-clip: padding-box, border-box;
         border: 1px solid transparent;
         border-radius: 15px;
+
+        a {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     .nav-previous {
         text-align: left;
     }
+
     .meta-nav {
         font-size: var(--jaguar-text-size-smallest);
         text-transform: uppercase;
         color: var(--jaguar-text-gray);
+        padding: 0 5px;
     }
 
     .post-title {
         font-size: 14px;
-        min-height: 3em;
+        min-height: 1.5em;
+        padding: 5px 5px;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         overflow: hidden;
+
         &:hover {
             color: var(--jaguar-main-color);
         }
@@ -410,5 +406,13 @@
         &:hover {
             fill: var(--jaguar-main-color);
         }
+    }
+}
+
+.jaguar--toc {
+    font-size: 14px;
+
+    summary {
+        cursor: pointer;
     }
 }

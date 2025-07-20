@@ -110,6 +110,7 @@ svg:not(:root) {
     margin-right: auto;
     margin-left: auto;
     width: 93%;
+
     &--page {
         max-width: var(--jaguar-content-width);
     }
@@ -143,10 +144,6 @@ svg:not(:root) {
     padding-bottom: 50px;
 }
 
-.post-actions {
-    padding-bottom: 10px;
-}
-
 .nav-links {
     display: flex;
     justify-content: center;
@@ -170,30 +167,17 @@ small {
 .middotDivider {
     padding-left: 0.25em;
     padding-right: 0.25em;
+
     &:after {
         content: '·';
     }
-}
-
-.site-content {
-    padding-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 720px;
-    width: 90%;
-}
-
-.container {
-    max-width: 720px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 90%;
 }
 
 .nav-links {
     display: flex;
     justify-content: center;
     padding: 15px 0;
+
     .page-numbers {
         text-align: center;
         color: var(--jaguar-background-white);
@@ -215,12 +199,6 @@ small {
         font-size: 12px;
         padding: 3px 9px;
     }
-}
-
-.screen-reader-text {
-    position: absolute;
-    left: -9999px;
-    top: -9999px;
 }
 
 .u-xs-show {

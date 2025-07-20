@@ -11,6 +11,7 @@ $next_post = get_next_post();
                     <span class="post-title">
                         <?php echo get_the_title($previou_post) ?>
                     </span>
+                    <img src="<?php echo jaguar_get_background_image($previou_post->ID); ?>" alt="<?php echo get_the_title($previou_post) ?>" class="post-thumbnail" />
                 </a>
             </div>
         <?php endif ?>
@@ -21,6 +22,7 @@ $next_post = get_next_post();
                     <span class="post-title">
                         <?php echo get_the_title($next_post) ?>
                     </span>
+                    <img src="<?php echo jaguar_get_background_image($next_post->ID); ?>" alt="<?php echo get_the_title($next_post) ?>" class="post-thumbnail" />
                 </a>
             </div>
         <?php endif ?>

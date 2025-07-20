@@ -6,7 +6,7 @@
     $the_query = new WP_Query(array(
         'post_type' => 'post',
         'post__not_in' => array(get_the_ID()),
-        'posts_per_page' => 6,
+        'posts_per_page' => 4,
         'category__in' => wp_get_post_categories(get_the_ID()),
         'tax_query' => get_post_format(get_the_ID()) ? array( // same post format
             array(

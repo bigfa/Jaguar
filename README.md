@@ -4,6 +4,10 @@
 
 ## Changelog
 
+### 3.0.4
+
+- update translation
+
 ### 3.0.3
 
 - add mark mode

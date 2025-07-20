@@ -1,6 +1,10 @@
 <?php global  $jaguarSetting; ?>
 <footer class="site--footer">
-    just a <a href="https://fatesinger.com" target="_blank">bigfa</a> theme.
+    <?php if ($jaguarSetting->get_setting('copyright')) : ?>
+        <?php echo $jaguarSetting->get_setting('copyright'); ?>
+    <?php else : ?>
+        just a <a href="https://fatesinger.com" target="_blank">bigfa</a> theme.
+    <?php endif; ?>
 </footer>
 </div>
 <?php if ($jaguarSetting->get_setting('back2top')): ?>

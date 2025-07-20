@@ -34,11 +34,7 @@ function typescripts() {
     return (
         gulp
             .src([
-                // './ts/modules/helper.ts',
                 './ts/app.ts',
-                // './ts/modules/db.ts',
-                // './ts/modules/lazy.ts',
-                // './ts/modules/map.ts',
                 './ts/modules/action.ts',
                 './ts/modules/comment.ts',
                 './ts/modules/scroll.ts',

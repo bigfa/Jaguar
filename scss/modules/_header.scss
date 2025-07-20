@@ -80,39 +80,46 @@
     margin-left: auto;
     align-items: center;
     margin-left: auto;
-    a {
-        margin: 0 20px;
+
+    .nav--list {
         display: flex;
+        flex-wrap: nowrap;
         align-items: center;
-        position: relative;
-        &:last-child {
-            margin-right: 0;
-        }
-        .svgIcon {
-            margin-left: 5px;
-        }
-        & > .text {
+
+        .menu-item {
+            margin: 0 20px;
             display: flex;
             align-items: center;
-        }
-        &::after {
-            position: absolute;
-            content: '';
-            left: 0;
-            right: 0;
-            top: 0;
-            height: 3px;
-            background-color: var(--main-hover-color);
-            transform: translate3d(0, -33px, 0);
-            transition: 0.5s;
-            border-radius: 0 0 5px 5px;
-        }
-
-        &:hover {
-            color: var(--main-hover-color);
-
+            position: relative;
+            &:last-child {
+                margin-right: 0;
+            }
+            .svgIcon {
+                margin-left: 5px;
+            }
+            & > .text {
+                display: flex;
+                align-items: center;
+            }
             &::after {
-                transform: translate3d(0, 0, 0);
+                position: absolute;
+                content: '';
+                left: 0;
+                right: 0;
+                top: 0;
+                height: 3px;
+                background-color: var(--main-hover-color);
+                transform: translate3d(0, -33px, 0);
+                transition: 0.5s;
+                border-radius: 0 0 5px 5px;
+            }
+
+            &:hover {
+                color: var(--main-hover-color);
+
+                &::after {
+                    transform: translate3d(0, 0, 0);
+                }
             }
         }
     }
