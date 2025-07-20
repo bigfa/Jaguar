@@ -6,6 +6,8 @@
 @use 'modules/footer';
 @use 'modules/header';
 @use 'modules/block';
+@use 'modules/pagination';
+@use 'modules/relatedPost';
 
 @use 'templates/single';
 @use 'templates/map';

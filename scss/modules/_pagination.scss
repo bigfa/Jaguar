@@ -1,0 +1,120 @@
+// .nav-links {
+//     display: flex;
+//     justify-content: center;
+//     background-color: var(--jaguar-background-white);
+// }
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+
+    .page-numbers {
+        text-align: center;
+        color: var(--jaguar-background-white);
+        background-color: var(--jaguar-text-light);
+        padding: 5px 12px;
+        font-size: 14px;
+        border-radius: 10px;
+        margin: 0px 5px;
+
+        &:hover,
+        &.current {
+            background-color: var(--jaguar-main-color);
+        }
+    }
+}
+
+.comments-pagination {
+    .page-numbers {
+        font-size: 12px;
+        padding: 3px 9px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pagination {
+        text-align: center;
+    }
+}
+
+.post-navigation {
+    overflow: hidden;
+    padding-top: 20px;
+
+    .nav-links {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        transition: 0.5s;
+
+        & > div {
+            &:only-child {
+                text-align: center !important;
+                width: 100%;
+            }
+        }
+    }
+
+    .post-thumbnail {
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .nav-previous,
+    .nav-next {
+        padding: 5px;
+        background-color: var(--jaguar-background-gray-light);
+        text-align: right;
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        border: 1px solid transparent;
+        border-radius: 15px;
+
+        a {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .nav-previous {
+        text-align: left;
+    }
+
+    .meta-nav {
+        font-size: var(--jaguar-text-size-smallest);
+        text-transform: uppercase;
+        color: var(--jaguar-text-gray);
+        padding: 0 5px;
+    }
+
+    .post-title {
+        font-size: 14px;
+        min-height: 1.5em;
+        padding: 5px 5px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        &:hover {
+            color: var(--jaguar-main-color);
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .post-navigation {
+        .nav-links {
+            grid-template-columns: 1fr;
+        }
+
+        .nav-previous,
+        .nav-next {
+            text-align: center;
+        }
+    }
+}

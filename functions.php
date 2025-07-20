@@ -91,7 +91,7 @@ function get_the_link_items($id = null)
             $image = $bookmark->link_image ? '<img src="' . $bookmark->link_image . '" alt="' . $bookmark->link_name . '" class="avatar">' : get_avatar($bookmark->link_notes, 64);
             $output .=  '<li class="link-item"><a class="link-item-inner" href="' . $bookmark->link_url . '" title="' . $bookmark->link_description . '" target="_blank" ><span class="sitename">
              ' . $image . '
-             <strong>' . $bookmark->link_name . '</strong>' . $bookmark->link_description . '<i class="btn">' . __('visit', 'Hera') . '</i></span></a></li>';
+             <strong>' . $bookmark->link_name . '</strong>' . $bookmark->link_description . '</span></a></li>';
         }
         $output .= '</ul>';
     } else {

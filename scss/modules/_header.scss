@@ -91,16 +91,20 @@
             display: flex;
             align-items: center;
             position: relative;
+
             &:last-child {
                 margin-right: 0;
             }
+
             .svgIcon {
                 margin-left: 5px;
             }
+
             & > .text {
                 display: flex;
                 align-items: center;
             }
+
             &::after {
                 position: absolute;
                 content: '';
@@ -141,6 +145,7 @@
 @media (max-width: 900px) {
     .menu--actived {
         overflow: hidden;
+
         .mask {
             position: fixed;
             background-color: rgb(0 0 0 / 80%);
@@ -151,6 +156,7 @@
             top: 0;
         }
     }
+
     .metabar {
         .menu--icon {
             display: block;
@@ -171,15 +177,18 @@
         position: relative;
         transition: 0.5s;
         transform: translate3d(105%, 0, 0);
+
         &.is-active {
             transform: translate3d(0, 0, 0);
         }
+
         a {
             padding: 5px 0;
             margin: 0 0 10px;
             width: 100%;
             display: flex;
             align-items: center;
+
             .text {
                 align-self: flex-start;
                 display: flex;
@@ -200,19 +209,6 @@
         background-color: var(--jaguar-background-white);
         overflow-y: auto;
     }
-}
-
-.author--avatar {
-    width: 24px;
-    height: 24px;
-    border-radius: 100%;
-    object-fit: cover;
-    margin-left: 5px;
-}
-
-.author--biolink {
-    display: flex;
-    align-items: center;
 }
 
 @keyframes metabar--active {

@@ -127,33 +127,11 @@ svg:not(:root) {
     padding-top: 50px;
 }
 
-@media (max-width: 600px) {
-    .pagination {
-        text-align: center;
-    }
-}
-
-.u-textAlignCenter {
-    text-align: center;
-}
-
 .error-404 {
     font-size: 260px;
     padding-top: 50px;
     text-align: center;
     padding-bottom: 50px;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: center;
-    background-color: var(--jaguar-background-white);
-}
-
-.u-flex {
-    display: flex;
-    align-items: center;
-    align-items: center;
 }
 
 .min-height-100 {
@@ -165,39 +143,11 @@ small {
 }
 
 .middotDivider {
-    padding-left: 0.25em;
-    padding-right: 0.25em;
+    padding-left: 0.45em;
+    padding-right: 0.45em;
 
     &:after {
         content: '·';
-    }
-}
-
-.nav-links {
-    display: flex;
-    justify-content: center;
-    padding: 15px 0;
-
-    .page-numbers {
-        text-align: center;
-        color: var(--jaguar-background-white);
-        background-color: var(--jaguar-text-light);
-        padding: 5px 12px;
-        font-size: 14px;
-        border-radius: 10px;
-        margin: 0px 5px;
-
-        &:hover,
-        &.current {
-            background-color: var(--jaguar-main-color);
-        }
-    }
-}
-
-.comments-pagination {
-    .page-numbers {
-        font-size: 12px;
-        padding: 3px 9px;
     }
 }
 
