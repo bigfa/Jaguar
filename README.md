@@ -7,6 +7,7 @@
 ### 3.0.4
 
 - update translation
+- add nav menu
 
 ### 3.0.3
 

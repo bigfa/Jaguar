@@ -37,8 +37,8 @@ function jaguar_get_background_image($post_id = null, $width = null, $height = n
         }
     }
 
-    if ($jaguarSetting->get_setting('upyun')) {
-        $output = $output . '?x-oss-process=image/resize,m_fill,h_' . $height . ',w_' . $width;
+    if ($jaguarSetting->get_setting('upyun') && $width && $height) {
+        $output = $output . '!/both/' . $width . 'x' . $height;
     }
 
     return $output;

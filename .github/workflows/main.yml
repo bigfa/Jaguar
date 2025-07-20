@@ -1,9 +1,9 @@
-name: Bigfa
+name: Update Notify
 
 on:
   push:
     branches:
-      - main
+      - master
     tags:
       - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
@@ -13,6 +13,6 @@ jobs:
     steps:
       - name: Notify theme updates
         run: |
-          curl --fail --request GET --header "Authorization: Bearer $SIGN" --url "https://jaguar.4398929.workers.dev/update?theme=jaguar&version=${{ github.ref }}"
+          curl --fail --request GET --header "Authorization: Bearer $SIGN" --url "https://farallon.4398929.workers.dev/update?theme=jaguar&version=${{ github.ref }}"
         env:
           SIGN: ${{ secrets.SIGN }}

@@ -1,7 +1,7 @@
 <?php global $jaguarSetting; ?>
 <article class="post-item" itemscope="http://schema.org/Article">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-image-link">
-        <img src="<?php echo jaguar_get_background_image(get_the_ID()); ?>" alt="<?php the_title(); ?>" class="post-image" itemprop="image" />
+        <img src="<?php echo jaguar_get_background_image(get_the_ID(), 800, 400); ?>" alt="<?php the_title(); ?>" class="post-image" itemprop="image" />
         <?php do_action('marker_pro_flag', get_the_ID()); ?>
     </a>
     <div class="post-item__content">

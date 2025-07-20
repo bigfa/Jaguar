@@ -21,7 +21,7 @@
         <div class="post--single__related__item" itemscope itemtype="https://schema.org/Article">
             <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
                 <div class="post--single__related__item__img">
-                    <img src="<?php echo jaguar_get_background_image(get_the_ID(), 400, 200); ?>" class="cover" alt="<?php the_title(); ?>" itemprop="image" />
+                    <img src="<?php echo jaguar_get_background_image(get_the_ID(), 800, 400); ?>" class="cover" alt="<?php the_title(); ?>" itemprop="image" />
                 </div>
                 <div class="post--single__related__item__content">
                     <div class="post--single__related__item__title" itemprop="headline">
