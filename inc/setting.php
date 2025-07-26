@@ -438,12 +438,24 @@ $jaguarSetting = new jaguarSetting(
                         'label' => __('Start heading', 'Jaguar'),
                         'description' => __('Start heading,default h3', 'Jaguar')
                     ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'show_rss_btn',
-                    //     'label' => __('RSS Button', 'Jaguar'),
-                    //     'description' => __('Show RSS Button in meta', 'Jaguar')
-                    // ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'post_views',
+                        'label' => __('Post views', 'Jaguar'),
+                        'description' => __('Show post views in meta', 'Jaguar')
+                    ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'post_reads',
+                        'label' => __('Post reads', 'Jaguar'),
+                        'description' => __('Show post reads in meta', 'Jaguar')
+                    ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'read_time',
+                        'label' => __('Post read time', 'Jaguar'),
+                        'description' => __('Show post read time in meta', 'Jaguar')
+                    ],
                     [
                         'type' => 'switch',
                         'name' => 'disable_comment_link',

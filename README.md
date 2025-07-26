@@ -4,6 +4,11 @@
 
 ## Changelog
 
+### 3.0.5
+
+- add post read time
+- add post read count
+
 ### 3.0.4
 
 - update translation

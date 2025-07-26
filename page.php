@@ -8,7 +8,7 @@
                     <div class="article--subline" itemprop="description"><?php echo get_post_meta(get_the_ID(), '_subtitle', true); ?></div>
                 <?php endif; ?>
             </header>
-            <div class="poppy" itemprop="articleBody">
+            <div class="jGraph" itemprop="articleBody">
                 <?php the_content(); ?>
             </div>
         </article>

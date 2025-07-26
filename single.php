@@ -14,9 +14,11 @@ get_header();
                     <time datetime="<?php echo esc_attr(get_the_date('c')); ?>" itemprop="datePublished"><?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) .  __('ago', 'Jaguar'); ?></time>
                     <span class="middotDivider"></span>
                     <span itemprop="articleSection"><?php the_category(','); ?></span>
+                    <span class="middotDivider"></span>
+                    <span class="article--reading-time" itemprop="timeRequired"><?php echo jaguar_get_post_read_time_text(get_the_ID()); ?></span>
                 </div>
             </header>
-            <div class="poppy" itemprop="articleBody">
+            <div class="jGraph" itemprop="articleBody">
                 <?php the_content(); ?>
             </div>
             <footer class="article--footer">

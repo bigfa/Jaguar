@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Jaguar 3.0.3\n"
+"Project-Id-Version: Jaguar 3.0.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Jaguar\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-07-19T15:45:53+00:00\n"
+"POT-Creation-Date: 2025-07-22T14:28:39+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: Jaguar\n"
@@ -78,6 +78,14 @@ msgstr[1] ""
 
 #: comments.php:33
 msgid "No comments yet."
+msgstr ""
+
+#: functions.php:92
+msgid "1 min read"
+msgstr ""
+
+#: functions.php:94
+msgid "%d min read"
 msgstr ""
 
 #: inc/base.php:142
@@ -158,9 +166,8 @@ msgstr ""
 
 #: inc/comment.php:275
 #: single.php:14
-#: single.php:24
 #: template-parts/content.php:17
-#: template-parts/single-related.php:32
+#: template-parts/single-related.php:33
 msgid "ago"
 msgstr ""
 
@@ -402,131 +409,155 @@ msgstr ""
 msgid "Start heading,default h3"
 msgstr ""
 
+#: inc/setting.php:444
+msgid "Post views"
+msgstr ""
+
+#: inc/setting.php:445
+msgid "Show post views in meta"
+msgstr ""
+
 #: inc/setting.php:450
-msgid "Disable comment link"
+msgid "Post reads"
 msgstr ""
 
 #: inc/setting.php:451
-msgid "Disable comment author url"
+msgid "Show post reads in meta"
 msgstr ""
 
 #: inc/setting.php:456
-msgid "No reply text"
+msgid "Post read time"
 msgstr ""
 
 #: inc/setting.php:457
-msgid "Text display when no comment in current post."
+msgid "Show post read time in meta"
 msgstr ""
 
 #: inc/setting.php:462
-msgid "Friend icon"
+msgid "Disable comment link"
 msgstr ""
 
 #: inc/setting.php:463
+msgid "Disable comment author url"
+msgstr ""
+
+#: inc/setting.php:468
+msgid "No reply text"
+msgstr ""
+
+#: inc/setting.php:469
+msgid "Text display when no comment in current post."
+msgstr ""
+
+#: inc/setting.php:474
+msgid "Friend icon"
+msgstr ""
+
+#: inc/setting.php:475
 msgid "Show icon when comment author url is in blogroll."
 msgstr ""
 
-#: inc/setting.php:486
+#: inc/setting.php:498
 msgid "SNS Icons"
 msgstr ""
 
-#: inc/setting.php:487
+#: inc/setting.php:499
 msgid "Show sns icons in footer, if this setting is on, the footer menu won',t be displayed."
 msgstr ""
 
-#: inc/setting.php:492
+#: inc/setting.php:504
 msgid "Telegram"
 msgstr ""
 
-#: inc/setting.php:493
+#: inc/setting.php:505
 msgid "Telegram link"
 msgstr ""
 
-#: inc/setting.php:498
+#: inc/setting.php:510
 msgid "Email"
 msgstr ""
 
-#: inc/setting.php:499
+#: inc/setting.php:511
 msgid "Your email address"
 msgstr ""
 
-#: inc/setting.php:504
+#: inc/setting.php:516
 msgid "Instagram"
 msgstr ""
 
-#: inc/setting.php:505
+#: inc/setting.php:517
 msgid "Instagram link"
 msgstr ""
 
-#: inc/setting.php:510
+#: inc/setting.php:522
 msgid "Twitter"
 msgstr ""
 
-#: inc/setting.php:511
+#: inc/setting.php:523
 msgid "Twitter link"
 msgstr ""
 
-#: inc/setting.php:516
+#: inc/setting.php:528
 msgid "RSS"
 msgstr ""
 
-#: inc/setting.php:517
+#: inc/setting.php:529
 msgid "RSS link"
 msgstr ""
 
-#: inc/setting.php:522
+#: inc/setting.php:534
 msgid "Github"
 msgstr ""
 
-#: inc/setting.php:523
+#: inc/setting.php:535
 msgid "Github link"
 msgstr ""
 
-#: inc/setting.php:528
+#: inc/setting.php:540
 msgid "Discord"
 msgstr ""
 
-#: inc/setting.php:529
+#: inc/setting.php:541
 msgid "Discord link"
 msgstr ""
 
-#: inc/setting.php:534
+#: inc/setting.php:546
 msgid "Mastodon"
 msgstr ""
 
-#: inc/setting.php:535
+#: inc/setting.php:547
 msgid "Mastodon link"
 msgstr ""
 
-#: inc/setting.php:540
+#: inc/setting.php:552
 msgid "Custom"
 msgstr ""
 
-#: inc/setting.php:541
+#: inc/setting.php:553
 msgid "Custom sns link,use html."
 msgstr ""
 
-#: inc/setting.php:551
+#: inc/setting.php:563
 msgid "CSS"
 msgstr ""
 
-#: inc/setting.php:552
+#: inc/setting.php:564
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/setting.php:557
+#: inc/setting.php:569
 msgid "Javascript"
 msgstr ""
 
-#: inc/setting.php:558
+#: inc/setting.php:570
 msgid "Custom Javascript"
 msgstr ""
 
-#: inc/setting.php:563
+#: inc/setting.php:575
 msgid "Copyright"
 msgstr ""
 
-#: inc/setting.php:564
+#: inc/setting.php:576
 msgid "Custom footer content"
 msgstr ""
 
@@ -542,14 +573,18 @@ msgstr ""
 msgid "Previous"
 msgstr ""
 
-#: template-parts/post-navigation.php:20
+#: template-parts/post-navigation.php:21
 msgid "Next"
 msgstr ""
 
-#: template-parts/single-related.php:1
+#: template-parts/single-related.php:2
 msgid "Related Posts"
 msgstr ""
 
 #. Template Name of the theme
 msgid "Archive"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Links"
 msgstr ""

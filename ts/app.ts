@@ -16,7 +16,6 @@ class jaguarBase {
         this.darkmode = obvInit.darkmode;
         //@ts-ignore
         this.VERSION = obvInit.version;
-
         console.log('version', this.VERSION);
     }
 

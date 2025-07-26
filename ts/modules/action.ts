@@ -1,3 +1,13 @@
+declare const obvInit: {
+    is_single: boolean;
+    post_id: number;
+    is_archive: boolean;
+    post_views?: any;
+    archive_id?: number;
+    restfulBase: string;
+    nonce: string;
+};
+
 class jaguarAction extends jaguarBase {
     like_btn: any;
     selctor: string = '.like-btn';
@@ -100,7 +110,7 @@ class jaguarAction extends jaguarBase {
             });
         }
 
-        if (this.is_single) {
+        if (this.is_single && obvInit.post_views) {
             this.trackPostView();
         }
 

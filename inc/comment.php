@@ -59,6 +59,12 @@ class jaguarComment
             'permission_callback' => '__return_true',
         ));
 
+        register_rest_route('jaguar/v1', '/read', array(
+            'methods' => 'get',
+            'callback' => array($this, 'handle_post_read'),
+            'permission_callback' => '__return_true',
+        ));
+
         register_rest_route('jaguar/v1', '/like', array(
             'methods' => 'POST',
             'callback' => array($this, 'handle_post_like'),
@@ -179,6 +185,19 @@ class jaguarComment
             }
         }
         return $comment_text;
+    }
+
+    function handle_post_read($data)
+    {
+        $post_id = $data['id'];
+        $post_reads = (int)get_post_meta($post_id, JAGUAR_POST_READ_KEY, true);
+        $post_reads++;
+        update_post_meta($post_id, JAGUAR_POST_READ_KEY, $post_reads);
+        return [
+            'code' => 200,
+            'message' => __('Success', 'Jaguar'),
+            'data' => $post_reads
+        ];
     }
 
     function handle_post_view($data)

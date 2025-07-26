@@ -361,6 +361,7 @@ class jaguarBase
                 'is_archive' => is_archive(),
                 'archive_id' => get_queried_object_id(),
                 'hide_home_cover' => !!$jaguarSetting->get_setting('hide_home_cover'),
+                'post_views' => !!$jaguarSetting->get_setting('post_views'),
             ]
         );
         if ($jaguarSetting->get_setting('javascript')) {

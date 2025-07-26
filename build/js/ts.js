@@ -155,7 +155,7 @@ var jaguarAction = /** @class */ (function (_super) {
                 });
             });
         }
-        if (_this.is_single) {
+        if (_this.is_single && obvInit.post_views) {
             _this.trackPostView();
         }
         if (_this.is_archive) {

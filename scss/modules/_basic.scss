@@ -30,6 +30,10 @@ h5 {
     font-weight: 400;
 }
 
+small {
+    font-size: 80%;
+}
+
 ol,
 ul {
     margin: 0;
@@ -136,10 +140,6 @@ svg:not(:root) {
 
 .min-height-100 {
     min-height: 75vh;
-}
-
-small {
-    font-size: 80%;
 }
 
 .middotDivider {
