@@ -2,6 +2,12 @@
     color: var(--jaguar-text-color);
     word-break: break-all;
 
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
     pre {
         word-break: break-all;
         white-space: break-spaces;
@@ -222,7 +228,7 @@
 }
 
 @media (max-width: 820px) {
-    .poppy {
+    .jGraph {
         blockquote {
             margin-left: 0;
             margin-right: 0;

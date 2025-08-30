@@ -103,12 +103,6 @@ svg:not(:root) {
     overflow: hidden;
 }
 
-.screen-reader-text {
-    left: -9999px;
-    position: absolute;
-    top: -9999px;
-}
-
 .layoutSingleColumn {
     max-width: var(--jaguar-content-width);
     margin-right: auto;

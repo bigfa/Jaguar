@@ -2,6 +2,7 @@
     padding: 30px 0;
     color: var(--jaguar-text-gray-lightest);
     text-align: center;
+    font-size: 14px;
 
     a {
         &:hover {
@@ -69,6 +70,8 @@
         &.is-active {
             color: var(--jaguar-text-color);
             background-color: var(--jaguar-background-gray);
+            box-shadow: 0 0 1px #88a7e1;
+            border: 1px solid var(--jaguar-background-white);
         }
 
         margin-right: 5px;

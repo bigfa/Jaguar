@@ -2,17 +2,18 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Jaguar 3.0.0\n"
+"Project-Id-Version: Jaguar 3.0.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Jaguar\n"
-"POT-Creation-Date: 2025-05-12T04:58:18+00:00\n"
-"PO-Revision-Date: 2025-07-22 22:29+0800\n"
+"POT-Creation-Date: 2025-08-30T15:38:20+00:00\n"
+"PO-Revision-Date: 2025-08-30 23:42+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.6\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.7\n"
 "X-Domain: Jaguar\n"
 
 #. Theme Name of the theme
@@ -40,25 +41,112 @@ msgstr ""
 msgid "https://github.com/bigfa"
 msgstr ""
 
-#: functions.php:92
+#: 404.php:5
+msgid "Oops! That page can't be found."
+msgstr "抱歉！找不到该页面。"
+
+#: archive.php:16 author.php:20 category.php:21 comments.php:27 index.php:10
+#: search.php:10
+msgid "Previous page"
+msgstr "上一页"
+
+#: archive.php:17 author.php:21 category.php:22 index.php:11 search.php:11
+msgid "Posts navigation"
+msgstr "文章导航"
+
+#: archive.php:18 author.php:22 category.php:23 comments.php:28 index.php:12
+#: search.php:12
+msgid "Next page"
+msgstr "下一页"
+
+#: comments.php:9
+msgctxt "comments title"
+msgid "One comment on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
+msgstr[0] "对 &ldquo;%2$s&rdquo; 的一条评论"
+
+#: comments.php:33
+msgid "No comments yet."
+msgstr "还没有评论。"
+
+#: functions.php:93
 msgid "1 min read"
-msgstr "需 1 分钟阅读"
+msgstr "1 分钟阅读"
 
-#: functions.php:94
+#: functions.php:95
 msgid "%d min read"
-msgstr "需 %d 分钟阅读"
+msgstr "%d 分钟阅读"
 
+#: inc/base.php:142
+msgid "Cover"
+msgstr "封面"
+
+#: inc/base.php:144
+msgid "Upload"
+msgstr "上传"
+
+#: inc/base.php:145
+msgid "Category cover url."
+msgstr "分类封面网址。"
+
+#: inc/base.php:149 inc/base.php:153
+msgid "Card Template"
+msgstr "卡片模板"
+
+#: inc/base.php:155
+msgid "Use Card Template"
+msgstr "使用卡片模板"
+
+#: inc/base.php:201 inc/setting.php:432
+msgid "Table of content"
+msgstr "目录"
+
+#: inc/base.php:224
+msgid "author"
+msgstr "作者"
+
+#: inc/base.php:224
+msgid "published on"
+msgstr "发布于"
+
+#: inc/base.php:261 inc/base.php:263
+msgid "Homepage Top"
+msgstr "首页顶部"
+
+#: inc/base.php:271 inc/base.php:273
+msgid "Homepage Bottom"
+msgstr "首页底部"
+
+#: inc/base.php:281 inc/base.php:283
+msgid "Single Page Bottom"
+msgstr "单页底部"
+
+#: inc/base.php:324 inc/setting.php:47
+msgid "Setting saved success!"
+msgstr "设置保存成功！"
+
+#: inc/base.php:325 inc/setting.php:48
+msgid "Upload Image"
+msgstr "上传图片"
+
+#: inc/base.php:326
+msgid "Set Category Image"
+msgstr "设置分类图片"
+
+#: inc/comment.php:91
+msgid "Author"
+msgstr "作者"
+
+#: inc/comment.php:149 inc/comment.php:168 inc/comment.php:198
+#: inc/comment.php:211 inc/comment.php:224 inc/comment.php:250
 #: inc/setting.php:28
 msgid "Success"
 msgstr "成功"
 
-#: inc/setting.php:47
-msgid "Setting saved success!"
-msgstr "设置保存成功！"
-
-#: inc/setting.php:48
-msgid "Upload Image"
-msgstr "上传图片"
+#: inc/comment.php:294 single.php:14 template-parts/content.php:17
+#: template-parts/single-related.php:33
+msgid " ago"
+msgstr "前"
 
 #: inc/setting.php:56 inc/setting.php:62
 msgid "Theme Setting"
@@ -82,11 +170,11 @@ msgstr "功能设置"
 
 #: inc/setting.php:213
 msgid "Singluar Setting"
-msgstr "文章设置"
+msgstr "单一设置"
 
 #: inc/setting.php:218
 msgid "SNS Setting"
-msgstr "社会化设置"
+msgstr "社交网络设置"
 
 #: inc/setting.php:223
 msgid "Custom Setting"
@@ -94,350 +182,384 @@ msgstr "自定义设置"
 
 #: inc/setting.php:234
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: inc/setting.php:235
 msgid "Site description"
-msgstr ""
+msgstr "站点描述"
 
 #: inc/setting.php:240
 msgid "Headcode"
-msgstr ""
+msgstr "头部代码"
 
 #: inc/setting.php:241
-msgid ""
-"You can add content to the head tag, such as site verification tags, and so "
-"on."
-msgstr ""
+msgid "You can add content to the head tag, such as site verification tags, and so on."
+msgstr "您可以向头部标签添加内容，例如站点验证标签等。"
 
 #: inc/setting.php:246
 msgid "Logo"
-msgstr ""
+msgstr "Logo"
 
 #: inc/setting.php:247
 msgid "Logo address."
-msgstr ""
+msgstr "Logo 地址。"
 
 #: inc/setting.php:252
 msgid "Og default thumb"
-msgstr ""
+msgstr "Og 默认缩略图"
 
 #: inc/setting.php:253
 msgid "Og meta default thumb address."
-msgstr ""
+msgstr "Og 元数据默认缩略图地址。"
 
 #: inc/setting.php:258
 msgid "Favicon"
-msgstr ""
+msgstr "网站图标"
 
 #: inc/setting.php:259
 msgid "Favicon address"
-msgstr ""
+msgstr "网站图标地址"
 
 #: inc/setting.php:264
 msgid "Title sep"
-msgstr ""
+msgstr "标题分隔符"
 
 #: inc/setting.php:265
 msgid "Default is"
-msgstr ""
+msgstr "默认是"
 
 #: inc/setting.php:270
 msgid "Disable block css"
-msgstr ""
+msgstr "禁用区块 CSS"
 
 #: inc/setting.php:271
 msgid "Do not load block-style files."
-msgstr ""
+msgstr "不加载区块样式文件。"
 
 #: inc/setting.php:276
 msgid "Gravatar proxy"
-msgstr ""
+msgstr "Gravatar 代理"
 
 #: inc/setting.php:277
 msgid "Gravatar proxy domain,like <code>cravatar.cn</code>"
-msgstr ""
+msgstr "Gravatar 代理域名，例如 <code>cravatar.cn</code>"
 
 #: inc/setting.php:282
 msgid "RSS Tag"
-msgstr ""
+msgstr "RSS 标签"
 
 #: inc/setting.php:283
 msgid "You can add tag in rss to verify follow."
-msgstr ""
+msgstr "您可以在 RSS 中添加标签以验证关注。"
 
 #: inc/setting.php:294
 msgid "Update notice"
-msgstr ""
+msgstr "更新通知"
 
 #: inc/setting.php:295
 msgid "Get theme update notice."
-msgstr ""
+msgstr "获取主题更新通知。"
 
 #: inc/setting.php:300
 msgid "Upyun CDN"
-msgstr ""
+msgstr "又拍云 CDN"
 
 #: inc/setting.php:301
-msgid ""
-"Make sure all images are uploaded to Upyun, otherwise thumbnails may not "
-"display properly."
-msgstr ""
+msgid "Make sure all images are uploaded to Upyun, otherwise thumbnails may not display properly."
+msgstr "确保所有图片都已上传到又拍云，否则缩略图可能无法正确显示。"
 
 #: inc/setting.php:306
 msgid "Aliyun OSS CDN"
-msgstr ""
+msgstr "阿里云 OSS CDN"
 
 #: inc/setting.php:307
-msgid ""
-"Make sure all images are uploaded to Aliyun OSS, otherwise thumbnails may "
-"not display properly."
-msgstr ""
+msgid "Make sure all images are uploaded to Aliyun OSS, otherwise thumbnails may not display properly."
+msgstr "确保所有图片都已上传到阿里云 OSS，否则缩略图可能无法正确显示。"
 
 #: inc/setting.php:312
 msgid "Qiniu OSS CDN"
-msgstr ""
+msgstr "七牛 OSS CDN"
 
 #: inc/setting.php:313
-msgid ""
-"Make sure all images are uploaded to Qiniu OSS, otherwise thumbnails may not "
-"display properly."
-msgstr ""
+msgid "Make sure all images are uploaded to Qiniu OSS, otherwise thumbnails may not display properly."
+msgstr "确保所有图片都已上传到七牛 OSS，否则缩略图可能无法正确显示。"
 
 #: inc/setting.php:318
 msgid "Dark Mode"
-msgstr ""
+msgstr "黑暗模式"
 
 #: inc/setting.php:319
 msgid "Enable dark mode"
-msgstr ""
+msgstr "启用黑暗模式"
 
 #: inc/setting.php:324
 msgid "Default thumbnail"
-msgstr ""
+msgstr "默认缩略图"
 
 #: inc/setting.php:325
 msgid "Default thumbnail address"
-msgstr ""
+msgstr "默认缩略图地址"
 
 #: inc/setting.php:330
 msgid "Back to top"
-msgstr ""
+msgstr "返回顶部"
 
 #: inc/setting.php:331
 msgid "Enable back to top"
-msgstr ""
+msgstr "启用返回顶部"
+
+#: inc/setting.php:342
+msgid "Excerpt info"
+msgstr "摘要信息"
+
+#: inc/setting.php:343
+msgid "Enable excerpt info in homepage"
+msgstr "启用首页摘要信息"
 
 #: inc/setting.php:348
 msgid "Category info"
-msgstr ""
+msgstr "分类信息"
 
 #: inc/setting.php:349
 msgid "Enable category info in homepage"
-msgstr ""
+msgstr "启用首页分类信息"
 
 #: inc/setting.php:354
 msgid "Views info"
-msgstr ""
+msgstr "浏览信息"
 
 #: inc/setting.php:355
 msgid "Enable views info in homepage"
-msgstr ""
+msgstr "启用首页浏览信息"
 
 #: inc/setting.php:396
 msgid "Related posts"
-msgstr ""
+msgstr "相关文章"
 
 #: inc/setting.php:397
 msgid "Enable related posts"
-msgstr ""
+msgstr "启用相关文章"
 
 #: inc/setting.php:402
 msgid "Post like"
-msgstr ""
+msgstr "文章点赞"
 
 #: inc/setting.php:403
 msgid "Enable post like"
-msgstr ""
+msgstr "启用文章点赞"
 
 #: inc/setting.php:408
 msgid "Post navigation"
-msgstr ""
+msgstr "文章导航"
 
 #: inc/setting.php:409
 msgid "Enable post navigation"
-msgstr ""
+msgstr "启用文章导航"
 
 #: inc/setting.php:414
 msgid "Copy link"
-msgstr ""
+msgstr "复制链接"
 
 #: inc/setting.php:415
 msgid "Enable copy link"
-msgstr ""
+msgstr "启用复制链接"
 
 #: inc/setting.php:426
 msgid "Show parent comment"
-msgstr ""
+msgstr "显示父级评论"
 
 #: inc/setting.php:427
 msgid "Enable show parent comment"
-msgstr ""
-
-#: inc/setting.php:432
-msgid "Table of content"
-msgstr ""
+msgstr "启用显示父级评论"
 
 #: inc/setting.php:433
 msgid "Enable table of content"
-msgstr ""
+msgstr "启用目录"
 
 #: inc/setting.php:438
 msgid "Start heading"
-msgstr ""
+msgstr "起始标题"
 
 #: inc/setting.php:439
 msgid "Start heading,default h3"
-msgstr ""
+msgstr "起始标题，默认 h3"
+
+#: inc/setting.php:444
+msgid "Post views"
+msgstr "文章浏览"
+
+#: inc/setting.php:445
+msgid "Show post views in meta"
+msgstr "在元数据中显示文章浏览"
 
 #: inc/setting.php:450
-msgid "Disable comment link"
-msgstr ""
+msgid "Post reads"
+msgstr "文章阅读"
 
 #: inc/setting.php:451
-msgid "Disable comment author url"
-msgstr ""
+msgid "Show post reads in meta"
+msgstr "在元数据中显示文章阅读"
 
 #: inc/setting.php:456
-msgid "No reply text"
-msgstr ""
+msgid "Post read time"
+msgstr "文章阅读时间"
 
 #: inc/setting.php:457
-msgid "Text display when no comment in current post."
-msgstr ""
+msgid "Show post read time in meta"
+msgstr "在元数据中显示文章阅读时间"
 
 #: inc/setting.php:462
-msgid "Friend icon"
-msgstr ""
+msgid "Disable comment link"
+msgstr "禁用评论链接"
 
 #: inc/setting.php:463
+msgid "Disable comment author url"
+msgstr "禁用评论作者网址"
+
+#: inc/setting.php:468
+msgid "No reply text"
+msgstr "没有回复文本"
+
+#: inc/setting.php:469
+msgid "Text display when no comment in current post."
+msgstr "当前文章没有评论时显示的文本。"
+
+#: inc/setting.php:474
+msgid "Friend icon"
+msgstr "好友图标"
+
+#: inc/setting.php:475
 msgid "Show icon when comment author url is in blogroll."
-msgstr ""
-
-#: inc/setting.php:486
-msgid "SNS Icons"
-msgstr ""
-
-#: inc/setting.php:487
-msgid ""
-"Show sns icons in footer, if this setting is on, the footer menu won',t be "
-"displayed."
-msgstr ""
-
-#: inc/setting.php:492
-msgid "Telegram"
-msgstr ""
-
-#: inc/setting.php:493
-msgid "Telegram link"
-msgstr ""
+msgstr "当评论作者网址在友情链接中时显示图标。"
 
 #: inc/setting.php:498
-msgid "Email"
-msgstr ""
+msgid "SNS Icons"
+msgstr "社交网络图标"
 
 #: inc/setting.php:499
-msgid "Your email address"
-msgstr ""
+msgid "Show sns icons in footer, if this setting is on, the footer menu won't be displayed."
+msgstr "在页脚显示社交网络图标，如果此设置开启，页脚菜单将不显示。"
 
 #: inc/setting.php:504
-msgid "Instagram"
-msgstr ""
+msgid "Telegram"
+msgstr "电报"
 
 #: inc/setting.php:505
-msgid "Instagram link"
-msgstr ""
+msgid "Telegram link"
+msgstr "电报链接"
 
 #: inc/setting.php:510
-msgid "Twitter"
-msgstr ""
+msgid "Email"
+msgstr "电子邮件"
 
 #: inc/setting.php:511
-msgid "Twitter link"
-msgstr ""
+msgid "Your email address"
+msgstr "您的电子邮件地址"
 
 #: inc/setting.php:516
-msgid "RSS"
-msgstr ""
+msgid "Instagram"
+msgstr "Instagram"
 
 #: inc/setting.php:517
-msgid "RSS link"
-msgstr ""
+msgid "Instagram link"
+msgstr "Instagram链接"
 
 #: inc/setting.php:522
-msgid "Github"
-msgstr ""
+msgid "Twitter"
+msgstr "Twitter"
 
 #: inc/setting.php:523
-msgid "Github link"
-msgstr ""
+msgid "Twitter link"
+msgstr "Twitter链接"
 
 #: inc/setting.php:528
-msgid "Discord"
-msgstr ""
+msgid "RSS"
+msgstr "RSS"
 
 #: inc/setting.php:529
-msgid "Discord link"
-msgstr ""
+msgid "RSS link"
+msgstr "RSS链接"
 
 #: inc/setting.php:534
-msgid "Mastodon"
-msgstr ""
+msgid "Github"
+msgstr "Github"
 
 #: inc/setting.php:535
-msgid "Mastodon link"
-msgstr ""
+msgid "Github link"
+msgstr "Github链接"
 
 #: inc/setting.php:540
-msgid "Custom"
-msgstr ""
+msgid "Discord"
+msgstr "Discord"
 
 #: inc/setting.php:541
-msgid "Custom sns link,use html."
-msgstr ""
+msgid "Discord link"
+msgstr "Discord链接"
 
-#: inc/setting.php:551
-msgid "CSS"
-msgstr ""
+#: inc/setting.php:546
+msgid "Mastodon"
+msgstr "Mastodon"
+
+#: inc/setting.php:547
+msgid "Mastodon link"
+msgstr "Mastodon链接"
 
 #: inc/setting.php:552
-msgid "Custom CSS"
-msgstr ""
+msgid "Custom"
+msgstr "自定义"
 
-#: inc/setting.php:557
-msgid "Javascript"
-msgstr ""
-
-#: inc/setting.php:558
-msgid "Custom Javascript"
-msgstr ""
+#: inc/setting.php:553
+msgid "Custom sns link,use html."
+msgstr "自定义社交网络链接，使用HTML。"
 
 #: inc/setting.php:563
-msgid "Copyright"
-msgstr ""
+msgid "CSS"
+msgstr "CSS"
 
 #: inc/setting.php:564
+msgid "Custom CSS"
+msgstr "自定义CSS"
+
+#: inc/setting.php:569
+msgid "Javascript"
+msgstr "JavaScript"
+
+#: inc/setting.php:570
+msgid "Custom Javascript"
+msgstr "自定义JavaScript"
+
+#: inc/setting.php:575
+msgid "Copyright"
+msgstr "版权"
+
+#: inc/setting.php:576
 msgid "Custom footer content"
-msgstr ""
+msgstr "自定义页脚内容"
 
-#: template-parts/content.php:11 template-parts/single-related.php:32
-msgid "ago"
-msgstr "前"
+#: template-parts/content.php:21
+msgid "shots"
+msgstr "截图"
 
-#: template-parts/single-related.php:1
+#: template-parts/post-navigation.php:5
+msgid "Post"
+msgstr "文章"
+
+#: template-parts/post-navigation.php:10
+msgid "Previous"
+msgstr "上一篇"
+
+#: template-parts/post-navigation.php:21
+msgid "Next"
+msgstr "下一篇"
+
+#: template-parts/single-related.php:2
 msgid "Related Posts"
 msgstr "相关文章"
 
 #. Template Name of the theme
-msgid "Wide Column"
-msgstr ""
+msgid "Archive"
+msgstr "归档"
+
+#. Template Name of the theme
+msgid "Links"
+msgstr "链接"

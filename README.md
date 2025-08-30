@@ -4,6 +4,10 @@
 
 ## Changelog
 
+### 3.0.6
+
+- style improvements
+
 ### 3.0.5
 
 - add post read time

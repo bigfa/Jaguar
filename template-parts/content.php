@@ -14,7 +14,7 @@
             </div>
         <?php endif; ?>
         <div class="jBlock--info">
-            <time class="jBlock--time" itemprop="datePublished" datetime="<?php echo get_the_date('c'); ?>"><?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) .  __('ago', 'Jaguar'); ?></time>
+            <time class="jBlock--time" itemprop="datePublished" datetime="<?php echo get_the_date('c'); ?>"><?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) .  __(' ago', 'Jaguar'); ?></time>
             <span class="middotDivider"></span>
             <span class="jBlock--tags" itemprop="articleSection"><?php the_category(','); ?></span>
             <?php echo jaguar_get_post_image_count(get_the_ID()) > 0 ? '<span class="middotDivider"></span>

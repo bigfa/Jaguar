@@ -103,19 +103,14 @@
 }
 
 #submit {
-    background-color: transparent;
-    display: inline-block;
+    background-color: #000;
     border: 1px solid var(--jaguar-border-color);
     border-radius: 15px;
-    padding: 6px 16px;
-    font-size: 14px;
-    color: var(--jaguar-text-gray);
+    padding: 6px 20px;
+    font-size: 12px;
+    color: #fff;
     cursor: pointer;
-
-    &:hover {
-        border-color: var(--jaguar-main-color);
-        color: var(--jaguar-main-color);
-    }
+    font-weight: normal;
 }
 
 .says {
@@ -238,4 +233,14 @@
     & > .children {
         margin-left: 50px;
     }
+}
+
+.friend--icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+}
+
+.comment--parent__link {
+    margin-right: 4px;
 }

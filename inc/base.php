@@ -198,7 +198,7 @@ class jaguarBase
             $toc .= str_repeat('</li></ul>', $previous_level - 2);
             $toc .= '</ul>';
 
-            $content = '<details class="jaguar--toc" open><summary>' . __('Table of content', 'Jaguar') . '</summary>' . $toc . '</details>' . $content;
+            $content = '<details class="jArticle--toc" open><summary>' . __('Table of content', 'Jaguar') . '</summary>' . $toc . '</details>' . $content;
         }
 
         return $content;

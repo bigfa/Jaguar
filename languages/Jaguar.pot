@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Jaguar 3.0.4\n"
+"Project-Id-Version: Jaguar 3.0.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Jaguar\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-07-22T14:28:39+00:00\n"
+"POT-Creation-Date: 2025-08-30T15:38:20+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: Jaguar\n"
@@ -80,11 +80,11 @@ msgstr[1] ""
 msgid "No comments yet."
 msgstr ""
 
-#: functions.php:92
+#: functions.php:93
 msgid "1 min read"
 msgstr ""
 
-#: functions.php:94
+#: functions.php:95
 msgid "%d min read"
 msgstr ""
 
@@ -151,20 +151,21 @@ msgstr ""
 msgid "Set Category Image"
 msgstr ""
 
-#: inc/comment.php:85
+#: inc/comment.php:91
 msgid "Author"
 msgstr ""
 
-#: inc/comment.php:143
-#: inc/comment.php:162
-#: inc/comment.php:192
-#: inc/comment.php:205
-#: inc/comment.php:231
+#: inc/comment.php:149
+#: inc/comment.php:168
+#: inc/comment.php:198
+#: inc/comment.php:211
+#: inc/comment.php:224
+#: inc/comment.php:250
 #: inc/setting.php:28
 msgid "Success"
 msgstr ""
 
-#: inc/comment.php:275
+#: inc/comment.php:294
 #: single.php:14
 #: template-parts/content.php:17
 #: template-parts/single-related.php:33

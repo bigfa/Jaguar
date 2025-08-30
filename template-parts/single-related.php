@@ -30,7 +30,7 @@
                         </div>
                         <div class="jRelated--meta">
                             <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished">
-                                <?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) .  __('ago', 'Jaguar'); ?>
+                                <?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) .  __(' ago', 'Jaguar'); ?>
                             </time>
                         </div>
                     </div>
