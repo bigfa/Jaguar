@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <div class="layoutSingleColumn layoutSingleColumn--wide u-paddingTop50">
-    <header class="archive--header">
-        <h1 class="archive--headline"><?php the_archive_title(); ?></h1>
+    <header class="jTerm--header">
+        <h1 class="jTerm--headline"><?php the_archive_title(); ?></h1>
         <?php if (get_the_archive_description()) : ?>
-            <div class="archive--description"><?php echo get_the_archive_description(); ?></div>
+            <div class="jTerm--description"><?php echo get_the_archive_description(); ?></div>
         <?php endif; ?>
     </header>
     <?php if (have_posts()) : ?>

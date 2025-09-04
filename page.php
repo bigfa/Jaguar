@@ -2,13 +2,13 @@
 <div class="layoutSingleColumn u-paddingTop50">
     <?php while (have_posts()) : the_post(); ?>
         <article itemscope itemtype="https://schema.org/Article">
-            <header class="article--header">
-                <h2 class="article--headline" itemprop="headline"><?php the_title(); ?></h2>
+            <header class="jArticle--header">
+                <h2 class="jArticle--headline" itemprop="headline"><?php the_title(); ?></h2>
                 <?php if (get_post_meta(get_the_ID(), '_subtitle', true)) : ?>
-                    <div class="article--subline" itemprop="description"><?php echo get_post_meta(get_the_ID(), '_subtitle', true); ?></div>
+                    <div class="jArticle--subline" itemprop="description"><?php echo get_post_meta(get_the_ID(), '_subtitle', true); ?></div>
                 <?php endif; ?>
             </header>
-            <div class="jGraph" itemprop="articleBody">
+            <div class="jGraph jArticle--content" itemprop="articleBody">
                 <?php the_content(); ?>
             </div>
         </article>

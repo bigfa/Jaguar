@@ -21,9 +21,9 @@ get_header();
             <div class="jGraph" itemprop="articleBody">
                 <?php the_content(); ?>
             </div>
-            <footer class="article--footer">
+            <footer class="jArticle--footer">
                 <div class="footerMeta">
-                    <span class="article--tags" itemprop="keywords"><?php the_tags('', '', ''); ?></span>
+                    <div class="jArticle--tags" itemprop="keywords"><?php the_tags('', '', ''); ?></div>
                 </div>
                 <?php get_template_part('template-parts/category', 'card'); ?>
                 <?php // get_template_part('template-parts/author', 'card'); 

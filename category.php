@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 <div class="layoutSingleColumn layoutSingleColumn--wide u-paddingTop50">
-    <header class="archive--header">
+    <header class="jTerm--header">
         <?php if (get_term_meta(get_queried_object_id(), '_thumb', true)) : ?>
-            <div class="archive--icon">
+            <div class="jTerm--icon">
                 <img src="<?php echo esc_url(get_term_meta(get_queried_object_id(), '_thumb', true)); ?>" alt="<?php single_cat_title(); ?>">
             </div>
         <?php endif; ?>
-        <h1 class="archive--headline"><?php single_cat_title(); ?></h1>
+        <h1 class="jTerm--headline"><?php single_cat_title(); ?></h1>
         <?php if (get_the_archive_description()) : ?>
-            <div class="archive--description"><?php echo get_the_archive_description(); ?></div>
+            <div class="jTerm--description"><?php echo get_the_archive_description(); ?></div>
         <?php endif; ?>
     </header>
     <?php if (have_posts()) : ?>

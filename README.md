@@ -4,6 +4,10 @@
 
 ## Changelog
 
+### 3.0.7
+
+- update translation
+
 ### 3.0.6
 
 - style improvements

@@ -2,9 +2,9 @@
 <div class="layoutSingleColumn layoutSingleColumn--wide u-paddingTop50">
     <?php if (have_posts()) : ?>
         <?php the_post(); ?>
-        <header class="archive--header">
-            <h1 class="archive--headline"><?php echo get_the_author(); ?></h1>
-            <div class="archive--description">
+        <header class="jTerm--header">
+            <h1 class="jTerm--headline"><?php echo get_the_author(); ?></h1>
+            <div class="jTerm--description">
                 <?php if (get_the_author_meta('description')) : ?>
                     <p><?php the_author_meta('description'); ?></p>
                 <?php endif; ?>

@@ -18,6 +18,7 @@ add_action('after_setup_theme', 'jaguar_setup');
 require('inc/setting.php');
 require('inc/base.php');
 require('inc/comment.php');
+require('inc/update.php');
 
 function jaguar_get_background_image($post_id = null, $width = null, $height = null)
 {

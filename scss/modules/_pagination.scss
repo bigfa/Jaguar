@@ -11,9 +11,11 @@
 
     .page-numbers {
         text-align: center;
-        color: var(--jaguar-background-white);
-        background-color: var(--jaguar-text-light);
-        padding: 5px 12px;
+        color: var(--jaguar-text-gray);
+        background-color: var(--jaguar-background-gray-light);
+        box-shadow: 0 0 1px #88a7e1;
+        border: 1px solid var(--jaguar-background-white);
+        padding: 3px 12px;
         font-size: 14px;
         border-radius: 10px;
         margin: 0px 5px;
@@ -21,6 +23,7 @@
         &:hover,
         &.current {
             background-color: var(--jaguar-main-color);
+            color: #fff;
         }
     }
 }

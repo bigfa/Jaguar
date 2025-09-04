@@ -22,12 +22,10 @@ class jaguarBase
         register_nav_menu('jaguar_footer', 'jaguar_footer');
         add_theme_support('post-formats', array('status'));
         add_filter('pre_option_link_manager_enabled', '__return_true');
-        add_action('widgets_init', array($this, 'widgets_init'));
         add_action('wp_head', array($this, 'head_output'), 11);
         add_action('edit_category_form_fields', array($this, 'add_category_cover_form_item'));
         add_action('edited_terms', array($this, 'update_my_category_fields'));
         add_theme_support('post-thumbnails');
-        // add_filter('template_include', array($this, 'category_card_template'), 1);
         if ($jaguarSetting->get_setting('toc'))
             add_filter('the_content', array($this, 'jaguar_toc'));
         if ($jaguarSetting->get_setting('gravatar_proxy'))
@@ -110,27 +108,9 @@ class jaguarBase
                 delete_term_meta($term_id, '_thumb');
             }
 
-            if ($_POST['_category_card']) {
-                update_term_meta($term_id, '_card', 1);
-            } else {
-                delete_term_meta($term_id, '_card');
-            }
-
         endif;
     }
 
-    function category_card_template($template_path)
-    {
-        global $wp_query;
-        if (is_category()) {
-            $category_id = get_queried_object_id();
-            $card = get_term_meta($category_id, '_card', true);
-            if ($card) {
-                $template_path = get_template_directory() . '/category-travel.php';
-            }
-        }
-        return $template_path;
-    }
 
     //Adds the custom title box to the category editor
     function add_category_cover_form_item($category)
@@ -143,17 +123,6 @@ class jaguarBase
                 <td><input name="_category_cover" id="_category_cover" type="text" size="40" aria-required="false" value="<?php echo $cover; ?>" class="regular-text ltr" />
                     <p class="description"><button id="upload-categoryCover" class="button"><?php _e('Upload', 'Jaguar'); ?></button></p>
                     <p class="description"><?php _e('Category cover url.', 'Jaguar'); ?></p>
-                </td>
-            </tr>
-            <tr class="form-field">
-                <th scope="row"><?php _e('Card Template', 'Jaguar'); ?></th>
-                <td>
-                    <fieldset>
-                        <legend class="screen-reader-text"><span>
-                                <?php _e('Card Template', 'Jaguar'); ?></span></legend><label for="_category_card">
-                            <input name="_category_card" type="checkbox" id="_category_card" value="1" <?php if ($card) echo 'checked' ?>>
-                            <?php _e('Use Card Template', 'Jaguar'); ?></label>
-                    </fieldset>
                 </td>
             </tr>
         </table>
@@ -209,7 +178,6 @@ class jaguarBase
         global $wp, $post, $jaguarSetting;
         $current_url = home_url(add_query_arg(array(), $wp->request));
 
-        //echo '<link type="image/vnd.microsoft.icon" href="/favicon.png" rel="shortcut icon">';
 
         $description = '';
         $blog_name = get_bloginfo('name');
@@ -252,40 +220,6 @@ class jaguarBase
             if ($description) echo '<meta name="description" content="' . $description . '">';
         }
         echo $ogmeta;
-    }
-
-    function widgets_init()
-    {
-
-        register_sidebar(array(
-            'name'          => __('Homepage Top', 'Jaguar'),
-            'id'            => 'topbar',
-            'description'   => __('Homepage Top', 'Jaguar'),
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</aside>',
-            'before_title'  => '<h3 class="heading-title">',
-            'after_title'   => '</h3>',
-        ));
-
-        register_sidebar(array(
-            'name'          => __('Homepage Bottom', 'Jaguar'),
-            'id'            => 'footerbar',
-            'description'   => __('Homepage Bottom', 'Jaguar'),
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</aside>',
-            'before_title'  => '<h3 class="heading-title">',
-            'after_title'   => '</h3>',
-        ));
-
-        register_sidebar(array(
-            'name'          => __('Single Pgae Bottom', 'Jaguar'),
-            'id'            => 'singlefooterbar',
-            'description'   => __('Single Pgae Bottom', 'Jaguar'),
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</aside>',
-            'before_title'  => '<h3 class="heading-title">',
-            'after_title'   => '</h3>',
-        ));
     }
 
     function custom_excerpt_length($excerpt)
