@@ -1,5 +1,123 @@
+.comment-form {
+    label {
+        display: block;
+        font-size: 12px;
+        color: var(--jaguar-text-gray-lightest);
+    }
+
+    .logged-in-as {
+        font-size: 12px;
+    }
+
+    .required {
+        color: #bc403e;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    input[type='email'],
+    input[type='url'],
+    input[type='text'] {
+        line-height: 24px;
+        width: 260px;
+        padding: 5px 15px;
+        font-size: 14px;
+        color: var(--jaguar-text-light);
+    }
+}
+
+#comment,
+.comment-form input[type='text'],
+.comment-form input[type='email'],
+.comment-form input[type='url'] {
+    border-radius: 15px;
+    background-color: transparent;
+    border: 1px solid var(--jaguar-border-color);
+    font-size: 14px;
+}
+
+#comment {
+    resize: none;
+    padding: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 14px;
+    color: var(--jaguar-text-light);
+    line-height: 1.5;
+}
+
+#submit {
+    background-color: #000;
+    border: 0;
+    border-radius: 15px;
+    padding: 5px 25px;
+    font-size: 13px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+.comment-form-cookies-consent {
+    #wp-comment-cookies-consent {
+        display: none;
+    }
+    label {
+        font-size: 14px;
+        color: var(--jaguar-text-gray);
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            background-color: var(--jaguar-background-white);
+            border: 1px solid var(--jaguar-border-color);
+            border-radius: 4px;
+            height: 16px;
+            margin-right: 6px;
+            vertical-align: middle;
+            width: 16px;
+            content: '';
+            flex: 0 0 auto;
+        }
+    }
+    input:checked + label {
+        &::after {
+            background-color: var(--jaguar-main-color);
+            border-radius: 3px;
+            content: '';
+            position: absolute;
+            left: 1px;
+            height: 12px;
+            margin: 2px;
+            width: 12px;
+            flex: 0 0 auto;
+        }
+    }
+}
+
 .screen-reader-text {
     left: -9999px;
     position: absolute;
     top: -9999px;
+}
+
+#cancel-comment-reply-link {
+    font-size: 14px;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.comment-notes {
+    font-size: 14px;
+    color: var(--jaguar-text-gray-lightest);
+}
+
+.comment-respond {
+    margin-top: 25px;
+    padding: 20px 0;
 }

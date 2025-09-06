@@ -1,5 +1,10 @@
 <?php global  $jaguarSetting; ?>
-<footer class="site--footer">
+<footer class="jFooter">
+    <?php if ($jaguarSetting->get_setting('footer_sns')): ?>
+        <div class="jFooter--icons">
+            <?php get_template_part('template-parts/sns'); ?>
+        </div>
+    <?php endif; ?>
     <?php if ($jaguarSetting->get_setting('copyright')) : ?>
         <?php echo $jaguarSetting->get_setting('copyright'); ?>
     <?php else : ?>

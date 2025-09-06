@@ -7,6 +7,11 @@
 
     transition: 0.5s;
 
+    @media screen and (max-width: 1200px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     &.is-active {
         position: fixed;
         --jaguar-background-opacity: 0.8;
@@ -39,13 +44,12 @@
         align-items: center;
         position: relative;
         height: 78px;
-        //@include layoutSingleColumn--wide;
+
         &__right {
             margin-left: auto;
             padding-right: 20px;
             a {
                 margin-left: 15px;
-                //font-weight: bold;
                 &:hover {
                     text-decoration: underline;
                     color: var(--main-hover-color);
@@ -53,6 +57,7 @@
             }
         }
     }
+
     &--headline {
         margin-top: 0;
         margin-bottom: 0;
@@ -87,10 +92,11 @@
         align-items: center;
 
         .menu-item {
-            margin: 0 20px;
+            margin: 0 15px;
             display: flex;
             align-items: center;
             position: relative;
+            font-size: 14px;
 
             &:last-child {
                 margin-right: 0;
@@ -105,25 +111,8 @@
                 align-items: center;
             }
 
-            &::after {
-                position: absolute;
-                content: '';
-                left: 0;
-                right: 0;
-                top: 0;
-                height: 3px;
-                background-color: var(--main-hover-color);
-                transform: translate3d(0, -33px, 0);
-                transition: 0.5s;
-                border-radius: 0 0 5px 5px;
-            }
-
             &:hover {
-                color: var(--main-hover-color);
-
-                &::after {
-                    transform: translate3d(0, 0, 0);
-                }
+                color: var(--jaguar-hover-color);
             }
         }
     }
@@ -135,20 +124,13 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
-    .metabar {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-
 @media (max-width: 900px) {
     .menu--actived {
         overflow: hidden;
 
         .mask {
             position: fixed;
-            background-color: rgb(0 0 0 / 80%);
+            background-color: rgba(0, 0, 0, 0.8);
             z-index: 500;
             left: 0;
             bottom: 0;
@@ -163,6 +145,7 @@
             margin-left: auto;
         }
     }
+
     .site--nav {
         z-index: 1000;
         display: flex;
@@ -177,9 +160,25 @@
         position: relative;
         transition: 0.5s;
         transform: translate3d(105%, 0, 0);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 75%;
+        right: 0;
+        background-color: var(--jaguar-background-white);
+        overflow-y: auto;
 
         &.is-active {
             transform: translate3d(0, 0, 0);
+        }
+
+        .nav--list {
+            flex-direction: column;
+            align-items: flex-start;
+
+            .menu-item {
+                margin: 0 0 10px;
+            }
         }
 
         a {
@@ -194,20 +193,12 @@
                 display: flex;
                 width: 100%;
                 align-items: center;
+
                 svg {
                     margin-left: auto;
                 }
             }
-            //display: none;
         }
-        //  display: none;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        width: 75%;
-        right: 0;
-        background-color: var(--jaguar-background-white);
-        overflow-y: auto;
     }
 }
 
@@ -215,7 +206,34 @@
     0% {
         transform: translate3d(0, -105%, 0);
     }
+
     100% {
         transform: translate3d(0, 0, 0);
+    }
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    background-color: var(--jaguar-background-gray);
+    border-radius: 999rem;
+    padding: 0 10px;
+
+    svg {
+        fill: var(--jaguar-text-light);
+    }
+
+    .search-field {
+        border: 0;
+        background-color: rgba(0, 0, 0, 0);
+        color: var(--jaguar-text-light);
+        padding: 12px 5px;
+        border-radius: 10px;
+        width: 220px;
+        font-size: 12px;
+    }
+
+    @media screen and (max-width: 600px) {
+        display: none;
     }
 }

@@ -25,9 +25,9 @@
         "gulp-typescript": "^6.0.0-alpha.1",
         "gulp-uglify": "^3.0.2",
         "normalize.scss": "^0.1.0",
-        "sass": "^1.49.9"
+        "sass": "^1.92.1"
     },
     "dependencies": {
-        "gulp-sass": "^5.1.0"
+        "gulp-sass": "^6.0.1"
     }
 }

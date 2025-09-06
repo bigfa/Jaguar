@@ -46,13 +46,13 @@ get_header();
     wp_reset_postdata();
     $output = '';
     foreach ($arr as $year => $year_post) {
-        $output .= '<div class="archive--list__year"><h2 class="archive--title__year ">' . $year . '</h2>';
+        $output .= '<div class="jArchive--area"><h2 class="jArchive--monthly">' . $year . '</h2>';
         foreach ($year_post as $month => $month_post) {
-            $output .=  '<ul class="archive--list" data-year="' . $year . ' - ' . $month  . '">';
+            $output .=  '<div class="jArchive--list" data-year="' . $year . ' - ' . $month  . '">';
             foreach ($month_post as $value) {
-                $output .= '<li class="archive--item"><div class="archive--title"><a href="' . $value['link'] . '">' . $value['title'] . '</a></div><div class="archive--meta">' . $value['date'] . '</div></li>';
+                $output .= '<div class="jArchive--item"><div class="jArchive--title"><a href="' . $value['link'] . '">' . $value['title'] . '</a></div><div class="jArchive--meta">' . $value['date'] . '</div></div>';
             }
-            $output .= '</ul>';
+            $output .= '</div>';
         }
         $output .= '</div>';
     }

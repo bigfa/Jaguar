@@ -330,12 +330,12 @@ $jaguarSetting = new jaguarSetting(
                         'label' => __('Back to top', 'Jaguar'),
                         'description' => __('Enable back to top', 'Jaguar')
                     ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'loadmore',
-                    //     'label' => __('Load more', 'Jaguar'),
-                    //     'description' => __('Enable load more', 'Jaguar')
-                    // ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'cleanmode',
+                        'label' => __('Clean mode', 'Jaguar'),
+                        'description' => __('Enable clean mode', 'Jaguar')
+                    ],
                     [
                         'type' => 'switch',
                         'name' => 'show_excerpt',

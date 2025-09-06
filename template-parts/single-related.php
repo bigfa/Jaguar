@@ -20,21 +20,21 @@
         ));
         while ($the_query->have_posts()) : $the_query->the_post(); ?>
             <div class="jRelated--item" itemscope itemtype="https://schema.org/Article">
-                <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>" class="jRelated--link" itemprop="url" title="<?php the_title(); ?>">
-                    <div class="jRelated--image">
-                        <img src="<?php echo jaguar_get_background_image(get_the_ID(), 800, 400); ?>" class="cover" alt="<?php the_title(); ?>" itemprop="image" />
-                    </div>
-                    <div class="jRelated--content">
-                        <div class="jRelated--title" itemprop="headline">
-                            <?php the_title(); ?>
-                        </div>
-                        <div class="jRelated--meta">
-                            <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished">
-                                <?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) .  __(' ago', 'Jaguar'); ?>
-                            </time>
-                        </div>
-                    </div>
+                <a class="jRelated--image" href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>" title="<?php the_title(); ?>">
+                    <img src="<?php echo jaguar_get_background_image(get_the_ID(), 800, 400); ?>" class="cover" alt="<?php the_title(); ?>" itemprop="image" />
                 </a>
+                <div class="jRelated--content">
+                    <div class="jRelated--title" itemprop="headline">
+                        <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+                    </div>
+                    <div class="jRelated--meta">
+                        <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished">
+                            <?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) .  __(' ago', 'Jaguar'); ?>
+                        </time>
+                        <span class="middotDivider"></span>
+                        <span class="article--reading-time" itemprop="timeRequired"><?php echo jaguar_get_post_read_time_text(get_the_ID()); ?></span>
+                    </div>
+                </div>
             </div>
         <?php endwhile;
         wp_reset_postdata(); ?>

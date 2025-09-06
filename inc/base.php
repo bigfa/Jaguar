@@ -42,6 +42,16 @@ class jaguarBase
             add_action('rss2_head', array($this, 'add_rss_tag'));
 
         add_filter('the_content', array($this, 'add_figure_has_by_image_slug'));
+        add_filter('body_class', array($this, 'hack_body_class'));
+    }
+
+    function hack_body_class($classes)
+    {
+        global $jaguarSetting;
+        if ($jaguarSetting->get_setting('cleanmode')) {
+            $classes[] = 'is-flatMode';
+        }
+        return $classes;
     }
 
     function add_rss_tag()

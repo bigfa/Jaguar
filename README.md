@@ -4,6 +4,10 @@
 
 ## Changelog
 
+### 3.0.8
+
+- add searchform
+
 ### 3.0.7
 
 - update translation

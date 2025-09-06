@@ -1,54 +1,58 @@
-.link-items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    list-style: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
+.jLink {
+    &--list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        list-style: none;
+        padding-top: 15px;
+        padding-bottom: 35px;
 
-@media screen and (max-width: 768px) {
-    .link-items {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+        @media screen and (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-.link-item {
-    border-radius: 10px;
-    padding: 8px;
-    background-color: var(--jaguar-background-gray-light);
-
-    .sitename {
-        font-size: 12px;
-        color: var(--jaguar-text-gray);
-        display: flex;
-        flex-direction: column;
-        line-height: 1.5;
-
-        strong {
-            font-size: 16px;
-            color: var(--jaguar-text-color);
-            margin-bottom: 5px;
+        @media screen and (max-width: 480px) {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 
-    .avatar {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        margin-bottom: 10px;
-        object-fit: cover;
+    &--item {
+        border-radius: 10px;
+        padding: 8px 12px;
+        @include jaguar-border;
+
+        .sitename {
+            font-size: 12px;
+            color: var(--jaguar-text-gray);
+            display: flex;
+            flex-direction: column;
+            line-height: 1.5;
+
+            strong {
+                font-size: 16px;
+                color: var(--jaguar-text-color);
+                margin-bottom: 5px;
+            }
+        }
+
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
     }
-}
 
-.link-title {
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-top: 30px;
-}
+    &--title {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-top: 30px;
+    }
 
-.link-description {
-    font-size: 14px;
-    color: var(--jaguar-text-gray);
+    &--description {
+        font-size: 14px;
+        color: var(--jaguar-text-gray);
+    }
 }

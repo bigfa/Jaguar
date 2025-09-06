@@ -1,0 +1,42 @@
+@mixin jaguar-border {
+    box-shadow: 0 0 1px #88a7e1;
+    border: 1px solid var(--jaguar-background-white);
+    background-color: var(--jaguar-background-gray-light);
+
+    .is-flatMode & {
+        box-shadow: none;
+        border: 1px solid var(--jaguar-border-color);
+        background-color: var(--jaguar-background-white);
+    }
+}
+
+@mixin sns-icons {
+    a {
+        margin: 0 0 0 12px;
+        display: flex;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    svg {
+        fill: var(--jaguar-text-light);
+        width: 24px;
+        height: 24px;
+
+        &:hover {
+            fill: var(--jaguar-hover-color);
+        }
+
+        &.sns {
+            fill: none;
+            stroke: var(--jaguar-text-light);
+
+            &:hover {
+                stroke: var(--jaguar-hover-color);
+                fill: none;
+            }
+        }
+    }
+}

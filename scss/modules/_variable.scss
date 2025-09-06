@@ -1,5 +1,4 @@
 :root {
-    //--jaguar-main-color: #27ae60;
     --jaguar-main-color: #cb4442; //#4370f5;
     --jaguar-hover-color: #903d37; // #3a5f9a;
     --jaguar-text-color: rgba(0, 0, 0, 0.84);
@@ -32,18 +31,10 @@
     --jaguar-border-radius: 15px;
     --jaguar-border-radius-small: 10px;
     --jaguar-border-radius-tiny: 5px;
-
-    .db--genreItem {
-        &:hover {
-            color: var(--jaguar-backgroud-white);
-        }
-    }
 }
 
 @media (prefers-color-scheme: dark) {
     .auto {
-        //--jaguar-main-color: rgba(253, 186, 116, 1);
-        //--jaguar-hover-color: rgba(255, 237, 213, 1);
         --jaguar-text-color: #a1a1aa;
         --jaguar-text-light: rgba(161, 161, 170, 1);
         --jaguar-text-gray: rgba(113, 113, 122, 1);
@@ -63,30 +54,10 @@
         --db--text-color-light: var(--jaguar-text-light);
         --db--background-gray: var(--jaguar-background-gray);
         --db-border-color: var(--jaguar-border-color);
-
-        .db--genreItem {
-            &:hover {
-                color: var(--jaguar-backgroud-white);
-            }
-        }
-
-        .doulist-item {
-            border-color: var(--db-border-color);
-        }
-
-        .comment-form {
-            input,
-            textarea {
-                background-color: rgba(63, 63, 70, 0.15);
-                border-color: rgba(63, 63, 70, 1);
-            }
-        }
     }
 }
 
 .dark {
-    //--jaguar-main-color: rgba(253, 186, 116, 1);
-    //--jaguar-hover-color: rgba(255, 237, 213, 1);
     --jaguar-text-color: #a1a1aa;
     --jaguar-text-light: rgba(161, 161, 170, 1);
     --jaguar-text-gray: rgba(113, 113, 122, 1);
@@ -106,24 +77,6 @@
     --db--text-color-light: var(--jaguar-text-light);
     --db--background-gray: var(--jaguar-background-gray);
     --db-border-color: var(--jaguar-border-color);
-
-    .db--genreItem {
-        &:hover {
-            color: var(--jaguar-backgroud-white);
-        }
-    }
-
-    .doulist-item {
-        border-color: var(--db-border-color);
-    }
-
-    .comment-form {
-        input,
-        textarea {
-            background-color: rgba(63, 63, 70, 0.15);
-            border-color: rgba(63, 63, 70, 1);
-        }
-    }
 }
 
 @font-face {

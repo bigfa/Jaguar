@@ -68,7 +68,7 @@ class jaguarAction extends jaguarBase {
         </span>
     </div>`;
         if (this.darkmode) {
-            document.querySelector('.site--footer')!.insertAdjacentHTML('beforeend', html);
+            document.querySelector('.jFooter')!.insertAdjacentHTML('beforeend', html);
         }
 
         document.querySelectorAll('.fixed--theme span').forEach((item) => {

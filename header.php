@@ -32,6 +32,12 @@
                         <?php echo get_bloginfo('name', 'display'); ?>
                     </a>
                 </h1>
+                <form method="get" class="search-form" action="<?php echo home_url(); ?>">
+                    <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path fill="currentColor" fill-rule="evenodd" d="M4.092 11.06a6.95 6.95.0 1113.9.0 6.95 6.95.0 01-13.9.0m6.95-8.05a8.05 8.05.0 105.13 14.26l3.75 3.75a.56.56.0 10.79-.79l-3.73-3.73A8.05 8.05.0 0011.042 3z" clip-rule="evenodd"></path>
+                    </svg>
+                    <input type="search" class="search-field" placeholder="<?php echo esc_attr_x('Search', 'placeholder', 'Jaguar'); ?>" name="s">
+                </form>
                 <meta itemprop="name" content="<?php echo get_bloginfo('name', 'display'); ?>">
                 <meta itemprop="url" content="<?php echo home_url(); ?>">
                 <nav class="site--nav">
@@ -43,7 +49,6 @@
                             'menu_class' => 'nav--list',
                             'fallback_cb' => false,
                             'depth' => 1,
-                            // 'walker' => new Jaguar_Walker_Nav_Menu()
                         ));
                         ?>
                     <?php endif; ?>

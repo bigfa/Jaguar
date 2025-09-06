@@ -12,11 +12,9 @@
 
     &--item {
         position: relative;
-        background-color: var(--jaguar-background-gray);
         padding: 5px;
-        border-radius: 15px;
-        box-shadow: 0 0 1px #88a7e1;
-        border: 1px solid var(--jaguar-background-white);
+        border-radius: var(--jaguar-border-radius);
+        @include jaguar-border;
     }
 
     &--content {
@@ -41,7 +39,7 @@
         width: 100%;
         height: var(--jaguar-block-image-height, 200px);
         object-fit: cover;
-        border-radius: 10px;
+        border-radius: var(--jaguar-border-radius-small);
 
         &Link {
             position: relative;
@@ -66,7 +64,7 @@
                 position: absolute;
                 top: 80%;
                 left: -6px;
-                background-color: var(--jaguar-background-gray);
+                background-color: var(--jaguar-dot-color, var(--jaguar-background-gray));
                 border-radius: 100%;
             }
 
@@ -77,8 +75,12 @@
                 position: absolute;
                 top: 80%;
                 right: -6px;
-                background-color: var(--jaguar-background-gray);
+                background-color: var(--jaguar-dot-color, var(--jaguar-background-gray));
                 border-radius: 100%;
+            }
+
+            .is-flatMode & {
+                --jaguar-dot-color: var(--jaguar-background-white);
             }
         }
     }
@@ -109,6 +111,12 @@
                 text-decoration: underline;
             }
         }
+    }
+
+    &--empty {
+        text-align: center;
+        padding: 50px 0;
+        color: var(--jaguar-text-gray);
     }
 }
 

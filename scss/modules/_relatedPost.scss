@@ -51,10 +51,8 @@
     }
 
     &--item {
-        background-color: var(--jaguar-background-gray);
         padding: 5px;
         border-radius: var(--jaguar-border-radius);
-        box-shadow: 0 0 1px #88a7e1;
-        border: 1px solid var(--jaguar-background-white);
+        @include jaguar-border;
     }
 }

@@ -39,19 +39,15 @@ class jaguarComment extends jaguarBase {
                             i = document.getElementById('respond'),
                             n = document.getElementById('wp-temp-form-div');
                         const comment = data.data;
-                        const html = `<li class="comment" id="comment-${comment.comment_ID}">
-                        <div class="comment-body comment-body__fresh">
-                            <footer class="comment-meta">
-                                <div class="comment--avatar">
+                        const html = `<li class="comment jComment--item" id="comment-${comment.comment_ID}">
+                        <div class="jComment--body comment-body__fresh">
+                            <footer class="jComment--meta">
                                     <img alt="" src="${comment.author_avatar_urls}" class="avatar" height="42" width="42" />
-                                </div>
-                                <div class="comment--meta">
-                                    <div class="comment--author">${comment.comment_author}<span class="middotDivider"></span>
-                                    <time class="comment--time">刚刚</time>
-                                    </div>
+                                    <div class="jComment--author">${comment.comment_author}<span class="middotDivider"></span>
+                                    <time class="jComment--time">刚刚</time>
                                 </div>
                             </footer>
-                            <div class="comment-content">
+                            <div class="jComment--content">
                                 ${comment.comment_content}
                             </div>
                         </div>
@@ -87,7 +83,7 @@ class jaguarComment extends jaguarBase {
                                 document.querySelector('.no--comment')?.remove();
                             }
                             document
-                                .querySelector('.comment--list')
+                                .querySelector('.jComment--list')
                                 ?.insertAdjacentHTML('beforeend', html);
                         }
 

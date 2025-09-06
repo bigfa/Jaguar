@@ -1,16 +1,19 @@
-@use 'modules/normalize';
-@use 'modules/variable';
-@use 'modules/basic';
-@use 'modules/comments';
-@use 'modules/grap';
-@use 'modules/footer';
-@use 'modules/header';
-@use 'modules/block';
-@use 'modules/pagination';
-@use 'modules/relatedPost';
+@import 'modules/mixins';
+@import 'modules/normalize';
+@import 'modules/variable';
 
-@use 'templates/single';
-@use 'templates/archive';
-@use 'templates/links';
+@import 'modules/basic';
+@import 'modules/comments';
+@import 'modules/grap';
+@import 'modules/footer';
+@import 'modules/header';
+@import 'modules/block';
+@import 'modules/pagination';
+@import 'modules/relatedPost';
 
-@use 'utilities/wp';
+@import 'templates/single';
+@import 'templates/archive';
+@import 'templates/links';
+@import 'templates/term';
+
+@import 'utilities/wp';

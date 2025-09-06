@@ -38,11 +38,9 @@
         }
 
         font-size: 14px;
-        background-color: var(--jaguar-background-gray-light);
-        box-shadow: 0 0 1px #88a7e1;
-        border: 1px solid var(--jaguar-background-white);
+        @include jaguar-border;
         padding: 10px 15px;
-        border-radius: 5px;
+        border-radius: var(--jaguar-border-radius);
         margin-bottom: 15px;
         li {
             margin-bottom: 0;
@@ -96,9 +94,7 @@
 
         a {
             padding: 5px 15px;
-            border-color: var(--jaguar-border-color);
-            background-color: var(--jaguar-background-gray-light);
-            box-shadow: 0 0 1px #88a7e1;
+            @include jaguar-border;
             color: var(--jaguar-text-gray);
             border-radius: 10px;
             margin-right: 12px;
@@ -135,10 +131,8 @@
     .avatar {
         border-radius: 100%;
         margin-bottom: 5px;
-        box-shadow: 0 0 1px #88a7e1;
         padding: 2px;
-        background-color: var(--jaguar-background-gray-light);
-        border: 1px solid var(--jaguar-background-white);
+        @include jaguar-border;
     }
 
     .authorCard--description {
@@ -194,6 +188,8 @@
     border: 0;
     background-color: rgba(0, 0, 0, 0);
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 
     &.is-active {
         svg {
@@ -215,5 +211,85 @@
 
     .icon--block {
         display: none;
+    }
+
+    .count {
+        font-size: 12px;
+        color: var(--jaguar-text-gray);
+        margin-top: 3px;
+    }
+}
+
+.translatedCard {
+    margin-bottom: 20px;
+    font-size: 14px;
+    h4 {
+        font-weight: 700;
+    }
+
+    ul {
+        list-style: square;
+        margin-left: 30px;
+        li a {
+            text-decoration: underline;
+            &::hover {
+                color: var(--jaguar-hover-color);
+            }
+        }
+    }
+}
+
+.jMixtapeEmbed {
+    display: flex;
+    align-items: center;
+    background-color: var(--jaguar-background-gray-light);
+    border-radius: var(--jaguar-border-radius-small);
+
+    .mixtapeImage {
+        width: 120px;
+        height: 120px;
+        background-size: cover;
+        flex: 0 0 auto;
+        border-radius: 0 var(--jaguar-border-radius-small) var(--jaguar-border-radius-small) 0;
+
+        @media screen and (max-width: 768px) {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    .mixtapeContent {
+        flex: 1 1 auto;
+        padding: 0 20px;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+        }
+
+        &:hover {
+            color: inherit;
+        }
+    }
+
+    .markup--strong {
+        font-size: 16px;
+        font-weight: 700;
+
+        @media screen and (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+
+    .markup--em {
+        font-style: normal;
+        color: var(--jaguar-text-gray);
+        line-height: 1.5;
+        max-height: 3em;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }

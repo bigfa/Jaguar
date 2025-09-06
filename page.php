@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="layoutSingleColumn u-paddingTop50">
     <?php while (have_posts()) : the_post(); ?>
-        <article itemscope itemtype="https://schema.org/Article">
+        <article itemscope itemtype="https://schema.org/Article" class="jArticle">
             <header class="jArticle--header">
                 <h2 class="jArticle--headline" itemprop="headline"><?php the_title(); ?></h2>
                 <?php if (get_post_meta(get_the_ID(), '_subtitle', true)) : ?>

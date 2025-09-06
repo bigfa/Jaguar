@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Jaguar 3.0.5\n"
+"Project-Id-Version: Jaguar 3.0.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Jaguar\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-08-30T15:38:20+00:00\n"
+"POT-Creation-Date: 2025-09-06T12:16:28+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: Jaguar\n"
@@ -39,14 +39,26 @@ msgstr ""
 msgid "https://github.com/bigfa"
 msgstr ""
 
-#: 404.php:5
+#: 404.php:4
 msgid "Oops! That page can't be found."
+msgstr ""
+
+#: 404.php:7
+msgid "Random Posts"
+msgstr ""
+
+#: 404.php:30
+#: inc/comment.php:292
+#: single.php:14
+#: template-parts/content.php:17
+#: template-parts/single-related.php:32
+msgid " ago"
 msgstr ""
 
 #: archive.php:16
 #: author.php:20
 #: category.php:21
-#: comments.php:27
+#: comments.php:34
 #: index.php:10
 #: search.php:10
 msgid "Previous page"
@@ -63,91 +75,65 @@ msgstr ""
 #: archive.php:18
 #: author.php:22
 #: category.php:23
-#: comments.php:28
+#: comments.php:35
 #: index.php:12
 #: search.php:12
 msgid "Next page"
 msgstr ""
 
-#: comments.php:9
-msgctxt "comments title"
-msgid "One comment on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: comments.php:33
+#: comments.php:40
 msgid "No comments yet."
 msgstr ""
 
-#: functions.php:93
+#: functions.php:94
 msgid "1 min read"
 msgstr ""
 
-#: functions.php:95
+#: functions.php:96
 msgid "%d min read"
 msgstr ""
 
-#: inc/base.php:142
+#: header.php:39
+msgctxt "placeholder"
+msgid "Search"
+msgstr ""
+
+#: inc/base.php:132
 msgid "Cover"
 msgstr ""
 
-#: inc/base.php:144
+#: inc/base.php:134
 msgid "Upload"
 msgstr ""
 
-#: inc/base.php:145
+#: inc/base.php:135
 msgid "Category cover url."
 msgstr ""
 
-#: inc/base.php:149
-#: inc/base.php:153
-msgid "Card Template"
-msgstr ""
-
-#: inc/base.php:155
-msgid "Use Card Template"
-msgstr ""
-
-#: inc/base.php:201
+#: inc/base.php:180
 #: inc/setting.php:432
 msgid "Table of content"
 msgstr ""
 
-#: inc/base.php:224
+#: inc/base.php:202
 msgid "author"
 msgstr ""
 
-#: inc/base.php:224
+#: inc/base.php:202
 msgid "published on"
 msgstr ""
 
-#: inc/base.php:261
-#: inc/base.php:263
-msgid "Homepage Top"
-msgstr ""
-
-#: inc/base.php:271
-#: inc/base.php:273
-msgid "Homepage Bottom"
-msgstr ""
-
-#: inc/base.php:281
-#: inc/base.php:283
-msgid "Single Pgae Bottom"
-msgstr ""
-
-#: inc/base.php:324
+#: inc/base.php:268
 #: inc/setting.php:47
 msgid "Setting saved success!"
 msgstr ""
 
-#: inc/base.php:325
+#: inc/base.php:269
 #: inc/setting.php:48
 msgid "Upload Image"
 msgstr ""
 
-#: inc/base.php:326
+#: inc/base.php:270
 msgid "Set Category Image"
 msgstr ""
 
@@ -163,13 +149,6 @@ msgstr ""
 #: inc/comment.php:250
 #: inc/setting.php:28
 msgid "Success"
-msgstr ""
-
-#: inc/comment.php:294
-#: single.php:14
-#: template-parts/content.php:17
-#: template-parts/single-related.php:33
-msgid "ago"
 msgstr ""
 
 #: inc/setting.php:56
@@ -332,6 +311,14 @@ msgstr ""
 
 #: inc/setting.php:331
 msgid "Enable back to top"
+msgstr ""
+
+#: inc/setting.php:336
+msgid "Clean mode"
+msgstr ""
+
+#: inc/setting.php:337
+msgid "Enable clean mode"
 msgstr ""
 
 #: inc/setting.php:342

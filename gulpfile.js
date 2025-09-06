@@ -16,7 +16,12 @@ function css() {
     return gulp
         .src('./scss/app.scss')
         .pipe(plumber())
-        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(
+            sass({
+                outputStyle: 'compressed',
+                silenceDeprecations: ['legacy-js-api', 'import', 'slash-div'],
+            })
+        )
         .pipe(rename('misc.css'))
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(gulp.dest('./build/css/'));
@@ -54,7 +59,12 @@ function settingCss() {
     return gulp
         .src('./scss/setting.scss')
         .pipe(plumber())
-        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(
+            sass({
+                outputStyle: 'compressed',
+                silenceDeprecations: ['legacy-js-api', 'import', 'slash-div'],
+            })
+        )
         .pipe(rename({ suffix: '.min' }))
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(gulp.dest('./build/css/'));

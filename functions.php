@@ -112,14 +112,14 @@ function get_the_link_items($id = null)
     $bookmarks = get_bookmarks('orderby=date&category=' . $id);
     $output = '';
     if (!empty($bookmarks)) {
-        $output .= '<ul class="link-items">';
+        $output .= '<div class="jLink--list">';
         foreach ($bookmarks as $bookmark) {
             $image = $bookmark->link_image ? '<img src="' . $bookmark->link_image . '" alt="' . $bookmark->link_name . '" class="avatar">' : get_avatar($bookmark->link_notes, 64);
-            $output .=  '<li class="link-item"><a class="link-item-inner" href="' . $bookmark->link_url . '" title="' . $bookmark->link_description . '" target="_blank" ><span class="sitename">
+            $output .=  '<div class="jLink--item"><a class="link-item-inner" href="' . $bookmark->link_url . '" title="' . $bookmark->link_description . '" target="_blank" ><span class="sitename">
              ' . $image . '
-             <strong>' . $bookmark->link_name . '</strong>' . $bookmark->link_description . '</span></a></li>';
+             <strong>' . $bookmark->link_name . '</strong>' . $bookmark->link_description . '</span></a></div>';
         }
-        $output .= '</ul>';
+        $output .= '</div>';
     } else {
         $output = __('No links yet', 'Hera');
     }
@@ -140,8 +140,8 @@ function get_link_items()
     $result = '';
     if (!empty($linkcats)) {
         foreach ($linkcats as $linkcat) {
-            $result .=  '<h3 class="link-title">' . $linkcat->name . '</h3>';
-            if ($linkcat->description) $result .= '<div class="link-description">' . $linkcat->description . '</div>';
+            $result .=  '<h3 class="jLink--title">' . $linkcat->name . '</h3>';
+            if ($linkcat->description) $result .= '<div class="jLink--description">' . $linkcat->description . '</div>';
             $result .=  get_the_link_items($linkcat->term_id);
         }
     } else {

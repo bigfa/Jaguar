@@ -11,6 +11,7 @@
             'screen_reader_text' =>  __('Posts navigation', 'Jaguar'),
             'next_text'          =>  __('Next page', 'Jaguar'),
             'before_page_number' => '',
+            'prev_next'          => false
         )); ?>
     <?php endif; ?>
 </div>

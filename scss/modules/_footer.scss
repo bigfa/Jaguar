@@ -1,4 +1,4 @@
-.site--footer {
+.jFooter {
     padding: 30px 0;
     color: var(--jaguar-text-gray-lightest);
     text-align: center;
@@ -8,6 +8,14 @@
         &:hover {
             text-decoration: underline;
         }
+    }
+
+    &--icons {
+        margin-bottom: 10px;
+        @include sns-icons;
+        justify-content: center;
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -69,9 +77,7 @@
 
         &.is-active {
             color: var(--jaguar-text-color);
-            background-color: var(--jaguar-background-gray);
-            box-shadow: 0 0 1px #88a7e1;
-            border: 1px solid var(--jaguar-background-white);
+            @include jaguar-border;
         }
 
         margin-right: 5px;

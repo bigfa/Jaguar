@@ -14,10 +14,10 @@ get_header();
 
 
 <main class="layoutSingleColumn u-paddingTop50">
-    <article itemscope="itemscope" itemtype="http://schema.org/Article">
+    <article itemscope="itemscope" itemtype="http://schema.org/Article" class="jArticle">
         <?php while (have_posts()) : the_post(); ?>
-            <header class="article--header">
-                <h2 class="article--headline" itemprop="headline"><?php the_title(); ?></h2>
+            <header class="jArticle--header">
+                <h2 class="jArticle--headline" itemprop="headline"><?php the_title(); ?></h2>
             </header>
             <?php echo get_link_items(); ?>
         <?php endwhile; ?>
