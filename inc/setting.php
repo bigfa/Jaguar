@@ -354,12 +354,12 @@ $jaguarSetting = new jaguarSetting(
                         'label' => __('Views info', 'Jaguar'),
                         'description' => __('Enable views info in homepage', 'Jaguar')
                     ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'home_image_count',
-                    //     'label' => __('Image count', 'Jaguar'),
-                    //     'description' => __('Show image count of the post', 'Jaguar')
-                    // ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'home_image_count',
+                        'label' => __('Image count', 'Jaguar'),
+                        'description' => __('Show image count of the post', 'Jaguar')
+                    ],
                     // [
                     //     'type' => 'switch',
                     //     'name' => 'hide_home_cover',
@@ -438,36 +438,36 @@ $jaguarSetting = new jaguarSetting(
                         'label' => __('Start heading', 'Jaguar'),
                         'description' => __('Start heading,default h3', 'Jaguar')
                     ],
-                    [
-                        'type' => 'switch',
-                        'name' => 'post_views',
-                        'label' => __('Post views', 'Jaguar'),
-                        'description' => __('Show post views in meta', 'Jaguar')
-                    ],
-                    [
-                        'type' => 'switch',
-                        'name' => 'post_reads',
-                        'label' => __('Post reads', 'Jaguar'),
-                        'description' => __('Show post reads in meta', 'Jaguar')
-                    ],
-                    [
-                        'type' => 'switch',
-                        'name' => 'read_time',
-                        'label' => __('Post read time', 'Jaguar'),
-                        'description' => __('Show post read time in meta', 'Jaguar')
-                    ],
+                    // [
+                    //     'type' => 'switch',
+                    //     'name' => 'post_views',
+                    //     'label' => __('Post views', 'Jaguar'),
+                    //     'description' => __('Show post views in meta', 'Jaguar')
+                    // ],
+                    // [
+                    //     'type' => 'switch',
+                    //     'name' => 'post_reads',
+                    //     'label' => __('Post reads', 'Jaguar'),
+                    //     'description' => __('Show post reads in meta', 'Jaguar')
+                    // ],
+                    // [
+                    //     'type' => 'switch',
+                    //     'name' => 'read_time',
+                    //     'label' => __('Post read time', 'Jaguar'),
+                    //     'description' => __('Show post read time in meta', 'Jaguar')
+                    // ],
                     [
                         'type' => 'switch',
                         'name' => 'disable_comment_link',
                         'label' => __('Disable comment link', 'Jaguar'),
                         'description' => __('Disable comment author url', 'Jaguar')
                     ],
-                    [
-                        'type' => 'input',
-                        'name' => 'no_reply_text',
-                        'label' => __('No reply text', 'Jaguar'),
-                        'description' => __('Text display when no comment in current post.', 'Jaguar')
-                    ],
+                    // [
+                    //     'type' => 'input',
+                    //     'name' => 'no_reply_text',
+                    //     'label' => __('No reply text', 'Jaguar'),
+                    //     'description' => __('Text display when no comment in current post.', 'Jaguar')
+                    // ],
                     [
                         'type' => 'switch',
                         'name' => 'friend_icon',

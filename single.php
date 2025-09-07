@@ -16,6 +16,8 @@ get_header();
                     <span itemprop="articleSection"><?php the_category(','); ?></span>
                     <span class="middotDivider"></span>
                     <span class="article--reading-time" itemprop="timeRequired"><?php echo jaguar_get_post_read_time_text(get_the_ID()); ?></span>
+                    <span class="middotDivider"></span>
+                    <?php echo jaguar_get_post_views_text(false, false, false, get_the_ID()); ?>
                 </div>
             </header>
             <div class="jGraph" itemprop="articleBody">
@@ -25,17 +27,15 @@ get_header();
                 <div class="footerMeta">
                     <div class="jArticle--tags" itemprop="keywords"><?php the_tags('', '', ''); ?></div>
                 </div>
-                <?php get_template_part('template-parts/category', 'card'); ?>
-                <?php // get_template_part('template-parts/author', 'card'); 
-                ?>
-                <?php get_template_part('template-parts/post', 'navigation'); ?>
-                <?php
-                if (comments_open() || get_comments_number()) :
-                    comments_template();
-                endif;
-                get_template_part('template-parts/single', 'related');
-                ?>
-            <?php endwhile; ?>
+            </footer>
+            <?php get_template_part('template-parts/post', 'navigation'); ?>
+            <?php
+            if (comments_open() || get_comments_number()) :
+                comments_template();
+            endif;
+            get_template_part('template-parts/single', 'related');
+            ?>
+        <?php endwhile; ?>
     </article>
 </div>
 <?php get_footer(); ?>

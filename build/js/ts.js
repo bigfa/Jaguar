@@ -393,14 +393,13 @@ window.addEventListener('scroll', function () {
     // Set the previous scroll position
     scrollTop = currentScrollTop;
     // Do something if scrolling back
-    if (isScrollingBack && currentScrollTop > 300) {
-        metabar.classList.add('is-active');
-        console.log('Scrolling back!');
-        area.style.paddingTop = '69px';
-    }
-    else {
-        metabar.classList.remove('is-active');
-        console.log('Scrolling forward!');
-        area.style.paddingTop = '0px';
-    }
+    // if (isScrollingBack && currentScrollTop > 300) {
+    //     metabar.classList.add('is-active');
+    //     console.log('Scrolling back!');
+    //     area.style.paddingTop = '69px';
+    // } else {
+    //     metabar.classList.remove('is-active');
+    //     console.log('Scrolling forward!');
+    //     area.style.paddingTop = '0px';
+    // }
 });

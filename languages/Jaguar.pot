@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Jaguar 3.0.6\n"
+"Project-Id-Version: Jaguar 3.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Jaguar\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-09-06T12:16:28+00:00\n"
+"POT-Creation-Date: 2025-09-06T17:20:25+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: Jaguar\n"
@@ -91,6 +91,18 @@ msgstr ""
 
 #: functions.php:96
 msgid "%d min read"
+msgstr ""
+
+#: functions.php:181
+msgid "No views yet"
+msgstr ""
+
+#: functions.php:183
+msgid "1 view"
+msgstr ""
+
+#: functions.php:185
+msgid "%d views"
 msgstr ""
 
 #: header.php:39
@@ -345,6 +357,14 @@ msgstr ""
 msgid "Enable views info in homepage"
 msgstr ""
 
+#: inc/setting.php:360
+msgid "Image count"
+msgstr ""
+
+#: inc/setting.php:361
+msgid "Show image count of the post"
+msgstr ""
+
 #: inc/setting.php:396
 msgid "Related posts"
 msgstr ""
@@ -549,7 +569,7 @@ msgstr ""
 msgid "Custom footer content"
 msgstr ""
 
-#: template-parts/content.php:21
+#: template-parts/content.php:28
 msgid "shots"
 msgstr ""
 

@@ -15,10 +15,18 @@
         <?php endif; ?>
         <div class="jBlock--info">
             <time class="jBlock--time" itemprop="datePublished" datetime="<?php echo get_the_date('c'); ?>"><?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) .  __(' ago', 'Jaguar'); ?></time>
-            <span class="middotDivider"></span>
-            <span class="jBlock--tags" itemprop="articleSection"><?php the_category(','); ?></span>
-            <?php echo jaguar_get_post_image_count(get_the_ID()) > 0 ? '<span class="middotDivider"></span>
+            <?php if ($jaguarSetting->get_setting('home_cat')) : ?>
+                <span class="middotDivider"></span>
+                <span class="jBlock--tags" itemprop="articleSection"><?php the_category(','); ?></span>
+            <?php endif; ?>
+            <?php if ($jaguarSetting->get_setting('home_views')) : ?>
+                <span class="middotDivider"></span>
+                <?php echo jaguar_get_post_views_text(false, false, false, get_the_ID()); ?>
+            <?php endif; ?>
+            <?php if ($jaguarSetting->get_setting('home_image_count')) : ?>
+                <?php echo jaguar_get_post_image_count(get_the_ID()) > 0 ? '<span class="middotDivider"></span>
             <span class="jBlock--image-count">' . jaguar_get_post_image_count(get_the_ID()) . ' ' . __('shots', 'Jaguar') . ' </span>' : ''; ?>
+            <?php endif; ?>
         </div>
     </div>
 </article>

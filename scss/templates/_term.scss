@@ -9,11 +9,19 @@
     &--headline {
         font-size: 26px;
         margin-bottom: 10px;
+
+        @media (max-width: 600px) {
+            font-size: 20px;
+        }
     }
 
     &--description {
         font-size: 18px;
         color: var(--jaguar-text-gray);
+
+        @media (max-width: 600px) {
+            font-size: 14px;
+        }
     }
 
     &--icon {
@@ -22,8 +30,13 @@
         img {
             width: 100px;
             height: 100px;
-            border-radius: 15px;
+            border-radius: var(--jaguar-border-radius);
             object-fit: cover;
+
+            @media (max-width: 600px) {
+                height: 64px;
+                width: 64px;
+            }
         }
     }
 }

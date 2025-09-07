@@ -4,6 +4,12 @@
 
 ## Changelog
 
+### 3.1.0
+
+- style improvements
+- add japanese support
+- update translation
+
 ### 3.0.8
 
 - add searchform
