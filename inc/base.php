@@ -230,6 +230,10 @@ class jaguarBase
             if ($description) echo '<meta name="description" content="' . $description . '">';
         }
         echo $ogmeta;
+
+        if ($jaguarSetting->get_setting('headcode')) {
+            echo $jaguarSetting->get_setting('headcode');
+        }
     }
 
     function custom_excerpt_length($excerpt)

@@ -19,7 +19,7 @@
                 <span class="middotDivider"></span>
                 <span class="jBlock--tags" itemprop="articleSection"><?php the_category(','); ?></span>
             <?php endif; ?>
-            <?php if ($jaguarSetting->get_setting('home_views')) : ?>
+            <?php if ($jaguarSetting->get_setting('home_views') && $jaguarSetting->get_setting('post_views')) : ?>
                 <span class="middotDivider"></span>
                 <?php echo jaguar_get_post_views_text(false, false, false, get_the_ID()); ?>
             <?php endif; ?>

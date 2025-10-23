@@ -396,24 +396,24 @@ $jaguarSetting = new jaguarSetting(
                         'label' => __('Related posts', 'Jaguar'),
                         'description' => __('Enable related posts', 'Jaguar')
                     ],
-                    [
-                        'type' => 'switch',
-                        'name' => 'postlike',
-                        'label' => __('Post like', 'Jaguar'),
-                        'description' => __('Enable post like', 'Jaguar')
-                    ],
+                    // [
+                    //     'type' => 'switch',
+                    //     'name' => 'postlike',
+                    //     'label' => __('Post like', 'Jaguar'),
+                    //     'description' => __('Enable post like', 'Jaguar')
+                    // ],
                     [
                         'type' => 'switch',
                         'name' => 'post_navigation',
                         'label' => __('Post navigation', 'Jaguar'),
                         'description' => __('Enable post navigation', 'Jaguar')
                     ],
-                    [
-                        'type' => 'switch',
-                        'name' => 'show_copylink',
-                        'label' => __('Copy link', 'Jaguar'),
-                        'description' => __('Enable copy link', 'Jaguar')
-                    ],
+                    // [
+                    //     'type' => 'switch',
+                    //     'name' => 'show_copylink',
+                    //     'label' => __('Copy link', 'Jaguar'),
+                    //     'description' => __('Enable copy link', 'Jaguar')
+                    // ],
                     // [
                     //     'type' => 'switch',
                     //     'name' => 'category_card',
@@ -438,12 +438,12 @@ $jaguarSetting = new jaguarSetting(
                         'label' => __('Start heading', 'Jaguar'),
                         'description' => __('Start heading,default h3', 'Jaguar')
                     ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'post_views',
-                    //     'label' => __('Post views', 'Jaguar'),
-                    //     'description' => __('Show post views in meta', 'Jaguar')
-                    // ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'post_views',
+                        'label' => __('Post views', 'Jaguar'),
+                        'description' => __('Show post views in meta', 'Jaguar')
+                    ],
                     // [
                     //     'type' => 'switch',
                     //     'name' => 'post_reads',

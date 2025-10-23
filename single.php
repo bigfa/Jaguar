@@ -1,5 +1,6 @@
 <?php
 get_header();
+global $jaguarSetting;
 ?>
 <div class="layoutSingleColumn u-paddingTop50">
     <article itemscope itemtype="https://schema.org/Article">
@@ -16,8 +17,10 @@ get_header();
                     <span itemprop="articleSection"><?php the_category(','); ?></span>
                     <span class="middotDivider"></span>
                     <span class="article--reading-time" itemprop="timeRequired"><?php echo jaguar_get_post_read_time_text(get_the_ID()); ?></span>
-                    <span class="middotDivider"></span>
-                    <?php echo jaguar_get_post_views_text(false, false, false, get_the_ID()); ?>
+                    <?php if ($jaguarSetting->get_setting('post_views')) : ?>
+                        <span class="middotDivider"></span>
+                        <?php echo jaguar_get_post_views_text(false, false, false, get_the_ID()); ?>
+                    <?php endif; ?>
                 </div>
             </header>
             <div class="jGraph" itemprop="articleBody">
@@ -28,12 +31,12 @@ get_header();
                     <div class="jArticle--tags" itemprop="keywords"><?php the_tags('', '', ''); ?></div>
                 </div>
             </footer>
-            <?php get_template_part('template-parts/post', 'navigation'); ?>
+            <?php if ($jaguarSetting->get_setting('post_navigation')) get_template_part('template-parts/post', 'navigation'); ?>
             <?php
             if (comments_open() || get_comments_number()) :
                 comments_template();
             endif;
-            get_template_part('template-parts/single', 'related');
+            if ($jaguarSetting->get_setting('related')) get_template_part('template-parts/single', 'related');
             ?>
         <?php endwhile; ?>
     </article>
